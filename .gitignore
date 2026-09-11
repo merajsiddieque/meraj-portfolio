@@ -1,0 +1,112 @@
+# ==============================================================================
+# Root .gitignore for Meraj Alam AI Portfolio & SaaS Platform
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Dependencies
+# ------------------------------------------------------------------------------
+node_modules/
+.pnp
+.pnp.js
+.venv/
+venv/
+ENV/
+env/
+.Python
+
+# ------------------------------------------------------------------------------
+# Python & Backend Artifacts
+# ------------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Backend runtime cache & generated data
+backend/data/*.json
+!backend/data/.gitkeep
+
+# ------------------------------------------------------------------------------
+# Frontend & Next.js Builds
+# ------------------------------------------------------------------------------
+.next/
+out/
+.turbo/
+.vercel/
+*.tsbuildinfo
+coverage/
+
+# ------------------------------------------------------------------------------
+# Environment Variables & Secrets
+# ------------------------------------------------------------------------------
+.env
+.env.*
+*.env
+*.env.*
+*.env.local*
+
+# Explicitly allow committing example files
+!.env.example
+!*.env.example
+!**/.env.example
+
+# ------------------------------------------------------------------------------
+# Databases & Local Data Stores
+# ------------------------------------------------------------------------------
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+local_portfolio.db
+backend/local_portfolio.db
+
+# ------------------------------------------------------------------------------
+# Logs & Diagnostic Files
+# ------------------------------------------------------------------------------
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ------------------------------------------------------------------------------
+# Docker Overrides
+# ------------------------------------------------------------------------------
+docker-compose.override.yml
+
+# ------------------------------------------------------------------------------
+# OS & Editor Files
+# ------------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

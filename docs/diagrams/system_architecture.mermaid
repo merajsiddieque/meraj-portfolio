@@ -1,0 +1,43 @@
+graph TD
+    subgraph Client ["Frontend (Next.js 15 App Router)"]
+        UI[User Interface & Hero]
+        ChatUI["Ask Meraj Chatbot UI"]
+        ProjectUI[Project Showcase & Filter]
+        ContactUI[Contact Form Component]
+        GitUI[GitHub Analytics Cards]
+    end
+
+    subgraph API ["Backend (FastAPI REST API)"]
+        Router["/api/v1 Router"]
+        ChatEP["POST /api/v1/chat"]
+        ProjEP["GET /api/v1/projects"]
+        ContactEP["POST /api/v1/contact"]
+        GitEP["GET /api/v1/github-stats"]
+        HealthEP["GET /health"]
+    end
+
+    subgraph Services ["Service Layer"]
+        AIService["AI Assistant Service (LangGraph/Gemini)"]
+        GitService["GitHub Telemetry Service (Cached)"]
+        DBService["SQLAlchemy 2.0 Session & ORM"]
+    end
+
+    subgraph External ["External & Persistence"]
+        GeminiAPI["Google Gemini API"]
+        SupabaseDB[("Supabase PostgreSQL Database")]
+        GitHubAPI["GitHub Public REST API"]
+    end
+
+    ChatUI -->|POST /chat| ChatEP
+    ProjectUI -->|GET /projects| ProjEP
+    ContactUI -->|POST /contact| ContactEP
+    GitUI -->|GET /github-stats| GitEP
+
+    ChatEP --> AIService
+    ProjEP --> DBService
+    ContactEP --> DBService
+    GitEP --> GitService
+
+    AIService -->|LLM Prompts| GeminiAPI
+    DBService -->|SQL Connection| SupabaseDB
+    GitService -->|Fetch Repos & Stats| GitHubAPI

@@ -1,0 +1,427 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light Theme Default Tokens */
+  --bg: #F6F8FC;
+  --surface: #FFFFFF;
+  --surface-alt: #F8FAFC;
+  --border: #E5E7EB;
+  --text: #0F172A;
+  --muted: #64748B;
+  --accent: #2563EB;
+
+  --background: var(--bg);
+  --foreground: var(--text);
+  --card: var(--surface);
+
+  /* Radius Scale */
+  --radius-sidebar: 28px;
+  --radius-header: 24px;
+  --radius-shell: 28px;
+  --radius-card: 22px;
+  --radius-input: 16px;
+  --radius-footer: 20px;
+}
+
+html.dark, .dark {
+  --bg: #050A14;
+  --surface: #09101C;
+  --surface-alt: #0D1627;
+  --border: rgba(255, 255, 255, 0.08);
+  --text: #F8FAFC;
+  --muted: #94A3B8;
+  --accent: #2563EB;
+
+  --background: var(--bg);
+  --foreground: var(--text);
+  --card: var(--surface);
+  color-scheme: dark;
+}
+
+html.light, .light {
+  --bg: #F6F8FC;
+  --surface: #FFFFFF;
+  --surface-alt: #F8FAFC;
+  --border: #E5E7EB;
+  --text: #0F172A;
+  --muted: #64748B;
+  --accent: #2563EB;
+
+  --background: var(--bg);
+  --foreground: var(--text);
+  --card: var(--surface);
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* ==========================================================================
+   Fixed 4-Panel Application Architecture
+   ========================================================================== */
+/* Root Application */
+.app-shell {
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  grid-template-rows: 72px 1fr 52px;
+  gap: 16px;
+  padding: 16px;
+  background: var(--bg);
+}
+
+/* Fixed Panels */
+.sidebar {
+  grid-row: 1 / span 3;
+  grid-column: 1;
+  border-radius: var(--radius-sidebar, 28px);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  overflow: hidden;
+  height: 100%;
+}
+
+.header {
+  grid-row: 1;
+  grid-column: 2;
+  border-radius: var(--radius-header, 24px);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  height: 100%;
+}
+
+.footer {
+  grid-row: 3;
+  grid-column: 2;
+  border-radius: var(--radius-footer, 20px);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  height: 100%;
+}
+
+.main-shell {
+  grid-row: 2;
+  grid-column: 2;
+  border-radius: var(--radius-shell, 28px);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  min-height: 0;
+  height: 100%;
+}
+
+/* Page Specific Scrolling & Layouts */
+.page-overview {
+  height: 100%;
+  overflow-y: auto;
+  padding: 32px;
+}
+
+.page-github {
+  height: 100%;
+  overflow-y: auto;
+  padding: 28px;
+}
+
+.page-projects {
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* Ask Meraj */
+.page-chat {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chat-header {
+  height: 68px;
+  flex-shrink: 0;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px;
+}
+
+.chat-input {
+  flex-shrink: 0;
+  border-top: 1px solid var(--border);
+  padding: 18px;
+}
+
+/* Contact */
+.page-contact {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  padding: 28px;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 24px;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.contact-info,
+.contact-form {
+  border-radius: 24px;
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  padding: 24px;
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+    grid-template-rows: 64px 1fr 48px;
+    padding: 8px;
+    gap: 8px;
+  }
+  .header {
+    grid-column: 1;
+    grid-row: 1;
+    border-radius: 20px;
+  }
+  .main-shell {
+    grid-column: 1;
+    grid-row: 2;
+    border-radius: 20px;
+  }
+  .footer {
+    grid-column: 1;
+    grid-row: 3;
+    border-radius: 16px;
+  }
+  .page-overview {
+    padding: 16px;
+  }
+  .page-github {
+    padding: 16px;
+  }
+  .page-contact {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+    overflow: visible;
+  }
+}
+
+.light .grid-background {
+  opacity: 0.28;
+}
+
+@layer utilities {
+  .dashboard-card {
+    background: rgba(14, 19, 31, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .dashboard-card:hover {
+    border-color: rgba(79, 140, 255, 0.35);
+    box-shadow: 0 10px 30px -10px rgba(79, 140, 255, 0.18);
+  }
+
+  .dashboard-card-highlight {
+    background: linear-gradient(135deg, rgba(20, 28, 48, 0.75) 0%, rgba(10, 14, 23, 0.75) 100%);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(79, 140, 255, 0.3);
+    border-radius: 20px;
+    box-shadow: 0 8px 30px -8px rgba(79, 140, 255, 0.25);
+  }
+
+  .gradient-text-electric {
+    background: linear-gradient(135deg, #ffffff 0%, #93c5fd 45%, #4f8cff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .gradient-text-cyan-violet {
+    background: linear-gradient(135deg, #39d0ff 0%, #818cf8 50%, #c084fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .linear-grid {
+    background-size: 32px 32px;
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  }
+
+  .cyber-grid {
+    background-size: 40px 40px;
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  }
+
+  .glass-panel {
+    background: rgba(15, 20, 32, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .glass-card {
+    background: linear-gradient(135deg, rgba(20, 26, 41, 0.7) 0%, rgba(11, 15, 23, 0.6) 100%);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .glass-card:hover {
+    border-color: rgba(37, 99, 235, 0.35);
+    box-shadow: 0 12px 30px -10px rgba(37, 99, 235, 0.2);
+    transform: translateY(-2px);
+  }
+
+  .glow-mesh {
+    background-image: 
+      radial-gradient(at 15% 15%, rgba(37, 99, 235, 0.15) 0px, transparent 50%),
+      radial-gradient(at 85% 20%, rgba(6, 182, 212, 0.12) 0px, transparent 50%),
+      radial-gradient(at 50% 85%, rgba(139, 92, 246, 0.12) 0px, transparent 50%);
+  }
+
+  .bg-radial-glow {
+    background-image: radial-gradient(circle at 50% 50%, rgba(79, 140, 255, 0.2) 0%, transparent 70%);
+  }
+}
+
+/* ==========================================================================
+   Light Mode Design Tokens & Scoped Styles (Apple Editorial)
+   ========================================================================== */
+html.light {
+  --bg: #F6F8FC;
+  --surface: #FFFFFF;
+  --surface-alt: #F8FAFC;
+  --border: #E5E7EB;
+  --text: #0F172A;
+  --muted: #64748B;
+  --accent: #2563EB;
+  --background: #F6F8FC;
+  --foreground: #0F172A;
+  --card: #FFFFFF;
+  --primary-text: #0F172A;
+  --secondary-text: #64748B;
+  --success: #16A34A;
+  color-scheme: light;
+}
+
+html.light,
+html.light body,
+html.light div.bg-background,
+html.light [class*="bg-background"] {
+  background-color: #F6F8FC;
+  color: #0F172A;
+}
+
+html.light .main-shell {
+  background-color: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05) !important;
+}
+
+html.light .header,
+html.light .footer,
+html.light .sidebar {
+  background-color: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+  box-shadow: 0 2px 10px -2px rgba(15, 23, 42, 0.04) !important;
+}
+
+html.light .linear-grid,
+html.light .cyber-grid {
+  background-color: #FFFFFF !important;
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(15, 23, 42, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.035) 1px, transparent 1px) !important;
+}
+
+html.light .gradient-text-electric {
+  background: linear-gradient(135deg, #0F172A 0%, #1E40AF 60%, #2563EB 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+html.light .gradient-text-cyan-violet {
+  background: linear-gradient(135deg, #0F172A 0%, #2563EB 50%, #7C3AED 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+/* Light mode card surfaces */
+html.light .dashboard-card,
+html.light .glass-card,
+html.light .glass-panel {
+  background: #FFFFFF !important;
+  background-color: #FFFFFF !important;
+  border-color: #E5E7EB !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+html.light .dashboard-card:hover,
+html.light .glass-card:hover {
+  border-color: #2563EB !important;
+  box-shadow: 0 4px 12px -2px rgba(37, 99, 235, 0.12) !important;
+}
+
+/* Scrollbar in light mode */
+html.light ::-webkit-scrollbar-track {
+  background: #F8FAFC;
+}
+html.light ::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 3px;
+}
+html.light ::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Hide scrollbar utility */
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}

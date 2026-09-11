@@ -1,0 +1,24 @@
+sequenceDiagram
+    autonumber
+    actor User as Recruiter / Visitor
+    participant NextJS as Next.js Chatbot UI
+    participant FastAPI as FastAPI (/api/v1/chat)
+    participant Agent as LangGraph / Heuristic Agent
+    participant Gemini as Google Gemini API
+    participant Knowledge as Meraj Resume & Project Vector DB
+
+    User->>NextJS: Enters question ("Tell me about Meraj's agentic code reviewer")
+    NextJS->>FastAPI: POST /api/v1/chat { message, history }
+    FastAPI->>Agent: Query Analysis & Context Injection
+    Agent->>Knowledge: Retrieve Meraj's Project & Experience Data
+    Knowledge-->>Agent: Relevant Tech Specs & Accomplishments
+    alt Gemini API Key Available
+        Agent->>Gemini: Prompt with System Guardrails & Injected Knowledge
+        Gemini-->>Agent: Structured Markdown Answer
+    else Local Heuristic Fallback
+        Agent-->>Agent: Evaluate Query Intent (Skills, Projects, Education, Contact)
+        Agent-->>Agent: Synthesize Rich Contextual Answer
+    end
+    Agent-->>FastAPI: Formatted Answer + Follow-up Suggestions
+    FastAPI-->>NextJS: 200 OK { response, suggested_prompts }
+    NextJS->>User: Renders Glassmorphic Chat Bubble with dynamic typing
