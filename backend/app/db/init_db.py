@@ -16,7 +16,7 @@ INITIAL_PROJECTS = [
         "category": "AI & GenAI",
         "tech_stack": "React,Node.js,Express,OpenAI API,MediaPipe,Firebase,WebSockets",
         "github_url": "https://github.com/merajsiddieque/Mental-Health-Chatbot",
-        "live_url": "https://mental-health-chatbot-cncd.onrender.com/login",
+        "live_url": "https://mental-health-chatbot-47un.onrender.com/",
         "image_url": "/projects/mental-health.png",
         "featured": True,
         "stars": 94,
