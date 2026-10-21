@@ -8,7 +8,6 @@ const GITHUB_API = "https://api.github.com";
 interface GitHubStarredRepository {
   id: number;
   name: string;
-  full_name: string;
   description: string | null;
   html_url: string;
   homepage: string | null;
@@ -47,7 +46,7 @@ export async function GET() {
     return NextResponse.json(
       repositories.map((repo) => ({
         id: repo.id,
-        title: repo.full_name,
+        title: repo.name,
         slug: repo.name.toLowerCase(),
         tagline: [repo.language, `${repo.stargazers_count} stars`, `${repo.forks_count} forks`]
           .filter(Boolean)

@@ -33,9 +33,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
     <motion.div
       whileHover={{ y: -4 }}
       transition={{ duration: 0.18 }}
-      className="rounded-[24px] bg-white dark:bg-[#0D121F]/70 border border-[#E5E7EB] dark:border-white/10 p-6 sm:p-7 shadow-sm hover:shadow-md dark:shadow-none hover:border-[#2563EB] dark:hover:border-electric-500/40 transition-all group flex flex-col justify-between select-none"
+      className="w-full min-w-0 overflow-hidden rounded-[24px] bg-white dark:bg-[#0D121F]/70 border border-[#E5E7EB] dark:border-white/10 p-6 sm:p-7 shadow-sm hover:shadow-md dark:shadow-none hover:border-[#2563EB] dark:hover:border-electric-500/40 transition-all group flex flex-col justify-between select-none"
     >
-      <div>
+      <div className="min-w-0">
         {/* Top Banner Graphic with Monogram/Tech Icon */}
         <div className="relative h-44 rounded-2xl bg-[#F8FAFC] dark:bg-gradient-to-br dark:from-surface-100 dark:via-surface-200 dark:to-surface-300 border border-[#E5E7EB] dark:border-white/10 overflow-hidden mb-6 flex items-center justify-center group-hover:border-[#2563EB]/40 transition-all">
           <div className="absolute inset-0 bg-radial-glow opacity-20 dark:opacity-30 pointer-events-none" />
@@ -65,11 +65,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         </div>
 
         {/* Project Titles */}
-        <h3 className="text-lg sm:text-xl font-bold text-[#0F172A] dark:text-white group-hover:text-[#2563EB] dark:group-hover:text-electric-400 transition-colors tracking-tight mb-1.5">
+        <h3 className="min-w-0 break-words [overflow-wrap:anywhere] line-clamp-2 text-lg sm:text-xl font-bold text-[#0F172A] dark:text-white group-hover:text-[#2563EB] dark:group-hover:text-electric-400 transition-colors tracking-tight mb-1.5">
           {project.title}
         </h3>
 
-        <p className="text-xs font-semibold text-[#2563EB] dark:text-cyan-300 mb-2.5 line-clamp-1">
+        <p className="break-words [overflow-wrap:anywhere] text-xs font-semibold text-[#2563EB] dark:text-cyan-300 mb-2.5 line-clamp-2">
           {project.tagline}
         </p>
 
