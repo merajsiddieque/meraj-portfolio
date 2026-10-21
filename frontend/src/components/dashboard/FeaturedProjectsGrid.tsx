@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { ArrowRight, ExternalLink, Github, Layers } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight, ExternalLink, Github, Layers } from "lucide-react";
 import { Project } from "@/types";
 
 const RepositoryCard: React.FC<{ project: Project }> = ({ project }) => (
@@ -65,6 +65,7 @@ const RepositoryCard: React.FC<{ project: Project }> = ({ project }) => (
 
 export const FeaturedProjectsGrid: React.FC = () => {
   const [projects, setProjects] = useState<Project[]>([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -123,17 +124,34 @@ export const FeaturedProjectsGrid: React.FC = () => {
       )}
 
       {!loading && !error && projects.length > 0 && (
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 items-stretch">
-          <div className="min-w-0">
-            <RepositoryCard project={projects[0]} />
+        <div className="space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch">
+            {Array.from({ length: Math.min(3, projects.length) }, (_, offset) => {
+              const project = projects[(currentIndex + offset) % projects.length];
+              return <RepositoryCard key={project.id} project={project} />;
+            })}
           </div>
-          {projects.length > 1 && (
-            <div className="min-w-0 lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-5 items-stretch">
-              {projects.slice(1).map((project) => (
-                <RepositoryCard key={project.id} project={project} />
-              ))}
-            </div>
-          )}
+          <div className="flex items-center justify-end gap-3">
+            <span className="min-w-16 text-right text-xs font-mono text-[#64748B] dark:text-slate-400" aria-live="polite">
+              {currentIndex + 1} / {projects.length}
+            </span>
+            <button
+              type="button"
+              onClick={() => setCurrentIndex((index) => (index - 1 + projects.length) % projects.length)}
+              aria-label="Previous starred repository"
+              className="p-1.5 rounded-lg border border-[#E5E7EB] dark:border-white/[0.08] bg-white dark:bg-white/[0.02] hover:bg-[#F1F5F9] dark:hover:bg-white/[0.06] text-[#334155] dark:text-slate-400 hover:text-[#0F172A] dark:hover:text-white transition-colors"
+            >
+              <ChevronLeft className="w-4 h-4" />
+            </button>
+            <button
+              type="button"
+              onClick={() => setCurrentIndex((index) => (index + 1) % projects.length)}
+              aria-label="Next starred repository"
+              className="p-1.5 rounded-lg border border-[#E5E7EB] dark:border-white/[0.08] bg-white dark:bg-white/[0.02] hover:bg-[#F1F5F9] dark:hover:bg-white/[0.06] text-[#334155] dark:text-slate-400 hover:text-[#0F172A] dark:hover:text-white transition-colors"
+            >
+              <ChevronRight className="w-4 h-4" />
+            </button>
+          </div>
         </div>
       )}
     </section>
