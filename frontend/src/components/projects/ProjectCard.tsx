@@ -3,14 +3,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Project } from "@/types";
-import { GlassCard } from "@/components/ui/GlassCard";
-import { Badge } from "@/components/ui/Badge";
 import {
   Github,
   ExternalLink,
-  BookOpen,
-  Sparkles,
-  Layers,
   Terminal,
   Activity,
   Workflow,
@@ -18,12 +13,10 @@ import {
 
 interface ProjectCardProps {
   project: Project;
-  onOpenCaseStudy: (project: Project) => void;
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
   project,
-  onOpenCaseStudy,
 }) => {
   const getProjectIcon = (slug?: string) => {
     if (!slug) return <Terminal className="w-8 h-8 text-electric-400" />;
@@ -103,15 +96,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       </div>
 
       {/* Action Buttons */}
-      <div className="pt-4 border-t border-[#E5E7EB] dark:border-white/10 flex items-center justify-between gap-2">
-        <button
-          onClick={() => onOpenCaseStudy(project)}
-          className="inline-flex items-center gap-1.5 text-xs font-semibold text-white px-3.5 py-2 rounded-xl bg-[#2563EB] hover:bg-[#1D4ED8] dark:bg-blue-600 dark:hover:bg-blue-500 shadow-xs transition-colors cursor-pointer active:scale-95"
-        >
-          <BookOpen className="w-3.5 h-3.5 text-white" />
-          <span className="text-white">Case Study</span>
-        </button>
-
+      <div className="pt-4 border-t border-[#E5E7EB] dark:border-white/10 flex items-center justify-end gap-2">
         <div className="flex items-center gap-2">
           {project.github_url && (
             <a
