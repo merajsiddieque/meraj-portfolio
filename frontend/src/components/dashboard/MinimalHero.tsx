@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import { PERSONAL_INFO } from "@/lib/constants";
 import { getGithubStats } from "@/lib/api";
+import { motion } from "framer-motion";
 
 export const MinimalHero: React.FC = () => {
   const [avatarSrc, setAvatarSrc] = useState<string>(PERSONAL_INFO.socials.avatar);
@@ -46,7 +47,12 @@ export const MinimalHero: React.FC = () => {
   }, []);
 
   return (
-    <section className="w-full bg-white dark:bg-[#1A212B]/60 border border-[#E5E7EB] dark:border-white/[0.08] rounded-[24px] p-6 sm:p-8 relative overflow-hidden shadow-sm dark:shadow-none transition-colors duration-180">
+    <motion.section
+      initial={{ opacity: 0, y: 14 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+      className="w-full bg-white dark:bg-[#1A212B]/60 border border-[#E5E7EB] dark:border-white/[0.08] rounded-[24px] p-6 sm:p-8 relative overflow-hidden shadow-sm dark:shadow-none transition-colors duration-180"
+    >
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         {/* Left: Biography & Tech Highlights */}
         <div className="lg:col-span-7 flex flex-col justify-center space-y-4">
@@ -207,6 +213,6 @@ export const MinimalHero: React.FC = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };

@@ -3,10 +3,18 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { ArrowRight, ChevronLeft, ChevronRight, ExternalLink, Github, Layers } from "lucide-react";
+import { motion } from "framer-motion";
 import { Project } from "@/types";
 
-const RepositoryCard: React.FC<{ project: Project }> = ({ project }) => (
-  <article className="w-full min-w-0 overflow-hidden rounded-[24px] p-5 sm:p-6 flex flex-col bg-white dark:bg-[#1A212B]/70 border border-[#E5E7EB] dark:border-white/[0.08] shadow-sm hover:border-[#426B96] dark:hover:border-white/20 transition-colors">
+const RepositoryCard: React.FC<{ project: Project; index: number }> = ({ project, index }) => (
+  <motion.article
+    initial={{ opacity: 0, y: 14 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, amount: 0.15 }}
+    whileHover={{ y: -4 }}
+    transition={{ duration: 0.35, delay: index * 0.07, ease: [0.22, 1, 0.36, 1] }}
+    className="w-full min-w-0 overflow-hidden rounded-[24px] p-5 sm:p-6 flex flex-col bg-white dark:bg-[#1A212B]/70 border border-[#E5E7EB] dark:border-white/[0.08] shadow-sm hover:border-[#426B96] dark:hover:border-white/20 transition-colors"
+  >
     <div className="min-w-0">
       <div className="flex flex-wrap items-center gap-2 mb-3">
         <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-medium bg-blue-50 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/20 text-blue-600 dark:text-blue-300">
@@ -60,7 +68,7 @@ const RepositoryCard: React.FC<{ project: Project }> = ({ project }) => (
       <span>View repository</span>
       <ExternalLink className="h-3 w-3" />
     </a>
-  </article>
+  </motion.article>
 );
 
 export const FeaturedProjectsGrid: React.FC = () => {
@@ -128,7 +136,7 @@ export const FeaturedProjectsGrid: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch">
             {Array.from({ length: Math.min(3, projects.length) }, (_, offset) => {
               const project = projects[(currentIndex + offset) % projects.length];
-              return <RepositoryCard key={project.id} project={project} />;
+              return <RepositoryCard key={project.id} project={project} index={offset} />;
             })}
           </div>
           <div className="flex items-center justify-end gap-3">
