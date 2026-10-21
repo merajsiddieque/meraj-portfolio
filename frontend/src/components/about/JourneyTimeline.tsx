@@ -60,7 +60,7 @@ export const JourneyTimeline: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/20 text-[#2563EB] dark:text-blue-400 text-xs font-mono font-semibold mb-3">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/20 text-[#426B96] dark:text-blue-400 text-xs font-mono font-semibold mb-3">
             <Compass className="w-3.5 h-3.5" />
             <span>Engineering Journey</span>
           </div>
@@ -87,29 +87,29 @@ export const JourneyTimeline: React.FC = () => {
                 className="relative pl-8 md:pl-0"
               >
                 {/* Node circle on the timeline rail */}
-                <div className="absolute -left-[41px] md:-left-[57px] top-1.5 w-7 h-7 rounded-full bg-white dark:bg-[#0E131F] border-2 border-[#2563EB] dark:border-blue-500 flex items-center justify-center shadow-xs">
-                  <div className="w-2.5 h-2.5 rounded-full bg-[#2563EB] dark:bg-cyan-400" />
+                <div className="absolute -left-[41px] md:-left-[57px] top-1.5 w-7 h-7 rounded-full bg-white dark:bg-[#0E131F] border-2 border-[#426B96] dark:border-blue-500 flex items-center justify-center shadow-xs">
+                  <div className="w-2.5 h-2.5 rounded-full bg-[#426B96] dark:bg-cyan-400" />
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-start">
                   {/* Date badge on desktop */}
                   <div className="hidden md:block md:col-span-3 pt-1">
-                    <span className="font-mono text-xs font-semibold text-[#2563EB] dark:text-cyan-400 bg-[#EFF6FF] dark:bg-cyan-950/60 border border-[#DBEAFE] dark:border-cyan-800/50 px-3 py-1.5 rounded-xl inline-block shadow-2xs">
+                    <span className="font-mono text-xs font-semibold text-[#426B96] dark:text-cyan-400 bg-[#F1F5F8] dark:bg-cyan-950/60 border border-[#E2EAF1] dark:border-cyan-800/50 px-3 py-1.5 rounded-xl inline-block shadow-2xs">
                       {m.period}
                     </span>
                   </div>
 
                   {/* Card content */}
                   <div className="md:col-span-9">
-                    <div className="rounded-2xl bg-white dark:bg-[#0D121F]/70 border border-[#E5E7EB] dark:border-white/10 p-6 md:p-7 shadow-sm dark:shadow-none hover:border-[#2563EB]/40 dark:hover:border-blue-500/30 transition-all">
+                    <div className="rounded-2xl bg-white dark:bg-[#1A212B]/70 border border-[#E5E7EB] dark:border-white/10 p-6 md:p-7 shadow-sm dark:shadow-none hover:border-[#426B96]/40 dark:hover:border-blue-500/30 transition-all">
                       <div className="md:hidden mb-3">
-                        <span className="font-mono text-xs font-semibold text-[#2563EB] dark:text-cyan-400 bg-[#EFF6FF] dark:bg-cyan-950/60 border border-[#DBEAFE] dark:border-cyan-800/50 px-2.5 py-1 rounded-lg inline-block">
+                        <span className="font-mono text-xs font-semibold text-[#426B96] dark:text-cyan-400 bg-[#F1F5F8] dark:bg-cyan-950/60 border border-[#E2EAF1] dark:border-cyan-800/50 px-2.5 py-1 rounded-lg inline-block">
                           {m.period}
                         </span>
                       </div>
 
                       <div className="flex items-start gap-4">
-                        <div className="p-3 rounded-xl bg-[#F1F5F9] dark:bg-blue-950/40 border border-[#E5E7EB] dark:border-blue-500/20 text-[#2563EB] dark:text-blue-400 shrink-0 mt-0.5">
+                        <div className="p-3 rounded-xl bg-[#F1F5F9] dark:bg-blue-950/40 border border-[#E5E7EB] dark:border-blue-500/20 text-[#426B96] dark:text-blue-400 shrink-0 mt-0.5">
                           <Icon className="w-5 h-5" />
                         </div>
                         <div className="flex-1">

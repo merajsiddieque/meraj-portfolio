@@ -41,11 +41,11 @@ export const AboutSkillsSplit: React.FC = () => {
   return (
     <section id="about" className="grid grid-cols-1 lg:grid-cols-12 gap-6 w-full">
       {/* Left Column: About, Education, Philosophy */}
-      <div className="lg:col-span-5 bg-white dark:bg-[#0D121F]/70 border border-[#E5E7EB] dark:border-white/10 rounded-[24px] p-6 sm:p-7 shadow-sm dark:shadow-none flex flex-col justify-between space-y-6 transition-colors">
+      <div className="lg:col-span-5 bg-white dark:bg-[#1A212B]/70 border border-[#E5E7EB] dark:border-white/10 rounded-[24px] p-6 sm:p-7 shadow-sm dark:shadow-none flex flex-col justify-between space-y-6 transition-colors">
         <div className="space-y-5">
           {/* Section Label */}
           <div className="flex items-center gap-2">
-            <div className="p-1.5 rounded-lg bg-[#F1F5F9] dark:bg-surface-100 border border-[#E5E7EB] dark:border-white/10 text-[#2563EB] dark:text-cyan-400">
+            <div className="p-1.5 rounded-lg bg-[#F1F5F9] dark:bg-surface-100 border border-[#E5E7EB] dark:border-white/10 text-[#426B96] dark:text-cyan-400">
               <User className="w-4 h-4" />
             </div>
             <h2 className="text-xs font-mono uppercase tracking-wider text-[#64748B] dark:text-slate-300 font-semibold">
@@ -66,7 +66,7 @@ export const AboutSkillsSplit: React.FC = () => {
           {/* Education & Philosophy Blocks */}
           <div className="space-y-3 pt-2">
             <div className="p-3.5 rounded-xl bg-[#F8FAFC] dark:bg-white/[0.02] border border-[#E5E7EB] dark:border-white/[0.08] flex items-start gap-3">
-              <GraduationCap className="w-4 h-4 text-[#2563EB] dark:text-cyan-400 shrink-0 mt-0.5" />
+              <GraduationCap className="w-4 h-4 text-[#426B96] dark:text-cyan-400 shrink-0 mt-0.5" />
               <div className="text-xs">
                 <div className="font-semibold text-[#0F172A] dark:text-white">SVNIT Surat (2023–2027)</div>
                 <div className="text-[#64748B] dark:text-slate-400 text-[11px]">B.Tech in Artificial Intelligence · Core AI &amp; Systems</div>
@@ -94,11 +94,11 @@ export const AboutSkillsSplit: React.FC = () => {
       </div>
 
       {/* Right Column: Categorized Technical Capabilities */}
-      <div className="lg:col-span-7 bg-white dark:bg-[#0D121F]/70 border border-[#E5E7EB] dark:border-white/10 rounded-[24px] p-6 sm:p-7 shadow-sm dark:shadow-none flex flex-col justify-between space-y-5 transition-colors">
+      <div className="lg:col-span-7 bg-white dark:bg-[#1A212B]/70 border border-[#E5E7EB] dark:border-white/10 rounded-[24px] p-6 sm:p-7 shadow-sm dark:shadow-none flex flex-col justify-between space-y-5 transition-colors">
         <div className="space-y-5">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <div className="p-1.5 rounded-lg bg-[#F1F5F9] dark:bg-surface-100 border border-[#E5E7EB] dark:border-white/10 text-[#2563EB] dark:text-electric-400">
+              <div className="p-1.5 rounded-lg bg-[#F1F5F9] dark:bg-surface-100 border border-[#E5E7EB] dark:border-white/10 text-[#426B96] dark:text-electric-400">
                 <Sparkles className="w-4 h-4" />
               </div>
               <h2 className="text-xs font-mono uppercase tracking-wider text-[#64748B] dark:text-slate-300 font-semibold">
@@ -123,7 +123,7 @@ export const AboutSkillsSplit: React.FC = () => {
                     {group.skills.map((skill) => (
                       <span
                         key={skill}
-                        className="text-[11px] font-medium px-2.5 py-1 rounded-lg bg-[#F8FAFC] dark:bg-white/[0.03] text-[#334155] dark:text-slate-300 border border-[#E5E7EB] dark:border-white/[0.08] hover:border-[#2563EB]/40 dark:hover:border-cyan-400/50 transition-colors cursor-default"
+                        className="text-[11px] font-medium px-2.5 py-1 rounded-lg bg-[#F8FAFC] dark:bg-white/[0.03] text-[#334155] dark:text-slate-300 border border-[#E5E7EB] dark:border-white/[0.08] hover:border-[#426B96]/40 dark:hover:border-cyan-400/50 transition-colors cursor-default"
                       >
                         {skill}
                       </span>

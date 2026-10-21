@@ -21,10 +21,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   const getProjectIcon = (slug?: string) => {
     if (!slug) return <Terminal className="w-8 h-8 text-electric-400" />;
     if (slug.includes("code-reviewer")) {
-      return <Workflow className="w-8 h-8 text-cyan-400" />;
+      return <Workflow className="w-8 h-8 text-blue-400" />;
     }
     if (slug.includes("mental-health")) {
-      return <Activity className="w-8 h-8 text-violet-400" />;
+      return <Activity className="w-8 h-8 text-slate-400" />;
     }
     return <Terminal className="w-8 h-8 text-electric-400" />;
   };
@@ -33,11 +33,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
     <motion.div
       whileHover={{ y: -4 }}
       transition={{ duration: 0.18 }}
-      className="w-full min-w-0 overflow-hidden rounded-[24px] bg-white dark:bg-[#0D121F]/70 border border-[#E5E7EB] dark:border-white/10 p-6 sm:p-7 shadow-sm hover:shadow-md dark:shadow-none hover:border-[#2563EB] dark:hover:border-electric-500/40 transition-all group flex flex-col justify-between select-none"
+      className="w-full min-w-0 overflow-hidden rounded-[24px] bg-white dark:bg-[#1A212B]/70 border border-[#E5E7EB] dark:border-white/10 p-6 sm:p-7 shadow-sm hover:shadow-md dark:shadow-none hover:border-[#426B96] dark:hover:border-electric-500/40 transition-all group flex flex-col justify-between select-none"
     >
       <div className="min-w-0">
         {/* Top Banner Graphic with Monogram/Tech Icon */}
-        <div className="relative h-44 rounded-2xl bg-[#F8FAFC] dark:bg-gradient-to-br dark:from-surface-100 dark:via-surface-200 dark:to-surface-300 border border-[#E5E7EB] dark:border-white/10 overflow-hidden mb-6 flex items-center justify-center group-hover:border-[#2563EB]/40 transition-all">
+        <div className="relative h-44 rounded-2xl bg-[#F8FAFC] dark:bg-gradient-to-br dark:from-surface-100 dark:via-surface-200 dark:to-surface-300 border border-[#E5E7EB] dark:border-white/10 overflow-hidden mb-6 flex items-center justify-center group-hover:border-[#426B96]/40 transition-all">
           <div className="absolute inset-0 bg-radial-glow opacity-20 dark:opacity-30 pointer-events-none" />
           
           {/* Central tech illustration */}
@@ -52,7 +52,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 
           {/* Top badges */}
           <div className="absolute top-3 left-3">
-            <span className="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-mono font-medium bg-[#EFF6FF] text-[#2563EB] border border-[#DBEAFE] dark:bg-cyan-950/60 dark:text-cyan-400 dark:border-cyan-800/50">
+            <span className="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-mono font-medium bg-[#F1F5F8] text-[#426B96] border border-[#E2EAF1] dark:bg-blue-950/30 dark:text-blue-300 dark:border-blue-800/40">
               {project.category}
             </span>
           </div>
@@ -65,11 +65,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         </div>
 
         {/* Project Titles */}
-        <h3 className="min-w-0 break-words [overflow-wrap:anywhere] line-clamp-2 text-lg sm:text-xl font-bold text-[#0F172A] dark:text-white group-hover:text-[#2563EB] dark:group-hover:text-electric-400 transition-colors tracking-tight mb-1.5">
+        <h3 className="min-w-0 break-words [overflow-wrap:anywhere] line-clamp-2 text-lg sm:text-xl font-bold text-[#0F172A] dark:text-white group-hover:text-[#426B96] dark:group-hover:text-electric-400 transition-colors tracking-tight mb-1.5">
           {project.title}
         </h3>
 
-        <p className="break-words [overflow-wrap:anywhere] text-xs font-semibold text-[#2563EB] dark:text-cyan-300 mb-2.5 line-clamp-2">
+        <p className="break-words [overflow-wrap:anywhere] text-xs font-semibold text-[#426B96] dark:text-blue-300 mb-2.5 line-clamp-2">
           {project.tagline}
         </p>
 
@@ -114,7 +114,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
               href={project.live_url}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-[#F1F5F9] dark:bg-surface-100 hover:bg-[#E2E8F0] dark:hover:bg-surface-50 border border-[#E5E7EB] dark:border-white/10 text-[#2563EB] dark:text-cyan-400 hover:text-[#1D4ED8] text-xs font-semibold transition-colors"
+              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-[#F1F5F9] dark:bg-surface-100 hover:bg-[#E2E8F0] dark:hover:bg-surface-50 border border-[#E5E7EB] dark:border-white/10 text-[#426B96] dark:text-blue-300 hover:text-[#355A81] text-xs font-semibold transition-colors"
             >
               <span>Demo</span>
               <ExternalLink className="w-3.5 h-3.5" />

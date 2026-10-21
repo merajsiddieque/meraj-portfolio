@@ -4,13 +4,13 @@
 
 :root {
   /* Light Theme Default Tokens */
-  --bg: #F6F8FC;
+  --bg: #F4F6F8;
   --surface: #FFFFFF;
-  --surface-alt: #F8FAFC;
-  --border: #E5E7EB;
-  --text: #0F172A;
-  --muted: #64748B;
-  --accent: #2563EB;
+  --surface-alt: #F7F8FA;
+  --border: #DCE1E7;
+  --text: #1B2530;
+  --muted: #657281;
+  --accent: #426B96;
 
   --background: var(--bg);
   --foreground: var(--text);
@@ -26,13 +26,13 @@
 }
 
 html.dark, .dark {
-  --bg: #050A14;
-  --surface: #09101C;
-  --surface-alt: #0D1627;
-  --border: rgba(255, 255, 255, 0.08);
-  --text: #F8FAFC;
-  --muted: #94A3B8;
-  --accent: #2563EB;
+  --bg: #11161D;
+  --surface: #171E27;
+  --surface-alt: #1E2732;
+  --border: rgba(148, 163, 184, 0.16);
+  --text: #F3F5F7;
+  --muted: #A0A9B5;
+  --accent: #426B96;
 
   --background: var(--bg);
   --foreground: var(--text);
@@ -41,13 +41,13 @@ html.dark, .dark {
 }
 
 html.light, .light {
-  --bg: #F6F8FC;
+  --bg: #F4F6F8;
   --surface: #FFFFFF;
-  --surface-alt: #F8FAFC;
-  --border: #E5E7EB;
-  --text: #0F172A;
-  --muted: #64748B;
-  --accent: #2563EB;
+  --surface-alt: #F7F8FA;
+  --border: #DCE1E7;
+  --text: #1B2530;
+  --muted: #657281;
+  --accent: #426B96;
 
   --background: var(--bg);
   --foreground: var(--text);
@@ -243,36 +243,36 @@ body {
 
 @layer utilities {
   .dashboard-card {
-    background: rgba(14, 19, 31, 0.65);
+    background: rgba(27, 34, 43, 0.72);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(148, 163, 184, 0.16);
     border-radius: 20px;
     transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .dashboard-card:hover {
-    border-color: rgba(79, 140, 255, 0.35);
-    box-shadow: 0 10px 30px -10px rgba(79, 140, 255, 0.18);
+    border-color: rgba(91, 127, 166, 0.45);
+    box-shadow: 0 8px 24px -12px rgba(35, 55, 78, 0.32);
   }
 
   .dashboard-card-highlight {
-    background: linear-gradient(135deg, rgba(20, 28, 48, 0.75) 0%, rgba(10, 14, 23, 0.75) 100%);
+    background: linear-gradient(135deg, rgba(35, 43, 53, 0.78) 0%, rgba(25, 32, 41, 0.78) 100%);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(79, 140, 255, 0.3);
+    border: 1px solid rgba(91, 127, 166, 0.3);
     border-radius: 20px;
-    box-shadow: 0 8px 30px -8px rgba(79, 140, 255, 0.25);
+    box-shadow: 0 8px 26px -12px rgba(40, 59, 82, 0.35);
   }
 
   .gradient-text-electric {
-    background: linear-gradient(135deg, #ffffff 0%, #93c5fd 45%, #4f8cff 100%);
+    background: linear-gradient(135deg, #f3f5f7 0%, #9aacc0 55%, #6483a5 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
   .gradient-text-cyan-violet {
-    background: linear-gradient(135deg, #39d0ff 0%, #818cf8 50%, #c084fc 100%);
+    background: linear-gradient(135deg, #aeb9c6 0%, #8294a8 55%, #60758d 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -292,35 +292,35 @@ body {
   }
 
   .glass-panel {
-    background: rgba(15, 20, 32, 0.65);
+    background: rgba(30, 38, 48, 0.78);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(148, 163, 184, 0.16);
   }
 
   .glass-card {
-    background: linear-gradient(135deg, rgba(20, 26, 41, 0.7) 0%, rgba(11, 15, 23, 0.6) 100%);
+    background: linear-gradient(135deg, rgba(37, 45, 55, 0.76) 0%, rgba(27, 34, 43, 0.72) 100%);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(148, 163, 184, 0.16);
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .glass-card:hover {
-    border-color: rgba(37, 99, 235, 0.35);
-    box-shadow: 0 12px 30px -10px rgba(37, 99, 235, 0.2);
+    border-color: rgba(91, 127, 166, 0.42);
+    box-shadow: 0 10px 26px -12px rgba(35, 55, 78, 0.35);
     transform: translateY(-2px);
   }
 
   .glow-mesh {
     background-image: 
-      radial-gradient(at 15% 15%, rgba(37, 99, 235, 0.15) 0px, transparent 50%),
-      radial-gradient(at 85% 20%, rgba(6, 182, 212, 0.12) 0px, transparent 50%),
-      radial-gradient(at 50% 85%, rgba(139, 92, 246, 0.12) 0px, transparent 50%);
+      radial-gradient(at 15% 15%, rgba(75, 105, 137, 0.08) 0px, transparent 50%),
+      radial-gradient(at 85% 20%, rgba(100, 116, 132, 0.05) 0px, transparent 50%),
+      radial-gradient(at 50% 85%, rgba(71, 85, 105, 0.05) 0px, transparent 50%);
   }
 
   .bg-radial-glow {
-    background-image: radial-gradient(circle at 50% 50%, rgba(79, 140, 255, 0.2) 0%, transparent 70%);
+    background-image: radial-gradient(circle at 50% 50%, rgba(75, 105, 137, 0.12) 0%, transparent 70%);
   }
 }
 
@@ -328,18 +328,18 @@ body {
    Light Mode Design Tokens & Scoped Styles (Apple Editorial)
    ========================================================================== */
 html.light {
-  --bg: #F6F8FC;
+  --bg: #F4F6F8;
   --surface: #FFFFFF;
-  --surface-alt: #F8FAFC;
-  --border: #E5E7EB;
-  --text: #0F172A;
-  --muted: #64748B;
-  --accent: #2563EB;
-  --background: #F6F8FC;
-  --foreground: #0F172A;
+  --surface-alt: #F7F8FA;
+  --border: #DCE1E7;
+  --text: #1B2530;
+  --muted: #657281;
+  --accent: #426B96;
+  --background: #F4F6F8;
+  --foreground: #1B2530;
   --card: #FFFFFF;
-  --primary-text: #0F172A;
-  --secondary-text: #64748B;
+  --primary-text: #1B2530;
+  --secondary-text: #657281;
   --success: #16A34A;
   color-scheme: light;
 }
@@ -348,13 +348,13 @@ html.light,
 html.light body,
 html.light div.bg-background,
 html.light [class*="bg-background"] {
-  background-color: #F6F8FC;
-  color: #0F172A;
+  background-color: #F4F6F8;
+  color: #1B2530;
 }
 
 html.light .main-shell {
   background-color: #FFFFFF !important;
-  border-color: #E2E8F0 !important;
+  border-color: #DCE1E7 !important;
   box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05) !important;
 }
 
@@ -362,7 +362,7 @@ html.light .header,
 html.light .footer,
 html.light .sidebar {
   background-color: #FFFFFF !important;
-  border-color: #E2E8F0 !important;
+  border-color: #DCE1E7 !important;
   box-shadow: 0 2px 10px -2px rgba(15, 23, 42, 0.04) !important;
 }
 
@@ -371,18 +371,18 @@ html.light .cyber-grid {
   background-color: #FFFFFF !important;
   background-size: 32px 32px;
   background-image: 
-    linear-gradient(to right, rgba(15, 23, 42, 0.035) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(15, 23, 42, 0.035) 1px, transparent 1px) !important;
+    linear-gradient(to right, rgba(31, 41, 55, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(31, 41, 55, 0.025) 1px, transparent 1px) !important;
 }
 
 html.light .gradient-text-electric {
-  background: linear-gradient(135deg, #0F172A 0%, #1E40AF 60%, #2563EB 100%) !important;
+  background: linear-gradient(135deg, #1B2530 0%, #496B90 60%, #426B96 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
 }
 
 html.light .gradient-text-cyan-violet {
-  background: linear-gradient(135deg, #0F172A 0%, #2563EB 50%, #7C3AED 100%) !important;
+  background: linear-gradient(135deg, #1B2530 0%, #496B90 60%, #718096 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
 }
@@ -393,7 +393,7 @@ html.light .glass-card,
 html.light .glass-panel {
   background: #FFFFFF !important;
   background-color: #FFFFFF !important;
-  border-color: #E5E7EB !important;
+  border-color: #DCE1E7 !important;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05) !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
@@ -401,8 +401,8 @@ html.light .glass-panel {
 
 html.light .dashboard-card:hover,
 html.light .glass-card:hover {
-  border-color: #2563EB !important;
-  box-shadow: 0 4px 12px -2px rgba(37, 99, 235, 0.12) !important;
+  border-color: #8DA2B8 !important;
+  box-shadow: 0 4px 12px -2px rgba(66, 107, 150, 0.12) !important;
 }
 
 /* Scrollbar in light mode */

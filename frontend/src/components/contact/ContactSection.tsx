@@ -120,16 +120,16 @@ export const ContactSection: React.FC = () => {
           {/* Channels List */}
           <div className="space-y-2.5">
             {/* Email */}
-            <div className="group p-2.5 sm:p-3 rounded-2xl bg-[var(--surface-alt)] border border-[var(--border)] hover:border-[#2563EB]/40 dark:hover:border-white/20 transition-all flex items-center justify-between gap-3">
+            <div className="group p-2.5 sm:p-3 rounded-2xl bg-[var(--surface-alt)] border border-[var(--border)] hover:border-[#426B96]/40 dark:hover:border-white/20 transition-all flex items-center justify-between gap-3">
               <div className="flex items-center gap-3 min-w-0">
-                <div className="w-8 h-8 rounded-xl bg-white dark:bg-white/[0.04] border border-[var(--border)] flex items-center justify-center text-[#2563EB] dark:text-blue-400 shrink-0 shadow-2xs">
+                <div className="w-8 h-8 rounded-xl bg-white dark:bg-white/[0.04] border border-[var(--border)] flex items-center justify-center text-[#426B96] dark:text-blue-400 shrink-0 shadow-2xs">
                   <Mail className="w-4 h-4" />
                 </div>
                 <div className="min-w-0">
                   <div className="text-[10px] font-mono text-[#64748B] dark:text-slate-500 uppercase">Email</div>
                   <a
                     href={`mailto:${PERSONAL_INFO.socials.email}`}
-                    className="text-xs font-semibold text-[#0F172A] dark:text-slate-200 hover:text-[#2563EB] dark:hover:text-white transition-colors truncate block"
+                    className="text-xs font-semibold text-[#0F172A] dark:text-slate-200 hover:text-[#426B96] dark:hover:text-white transition-colors truncate block"
                     title={PERSONAL_INFO.socials.email}
                   >
                     {PERSONAL_INFO.socials.email}
@@ -156,7 +156,7 @@ export const ContactSection: React.FC = () => {
               href={PERSONAL_INFO.socials.linkedin}
               target="_blank"
               rel="noreferrer"
-              className="group p-2.5 sm:p-3 rounded-2xl bg-[var(--surface-alt)] border border-[var(--border)] hover:border-[#2563EB]/40 dark:hover:border-white/20 transition-all flex items-center justify-between gap-3"
+              className="group p-2.5 sm:p-3 rounded-2xl bg-[var(--surface-alt)] border border-[var(--border)] hover:border-[#426B96]/40 dark:hover:border-white/20 transition-all flex items-center justify-between gap-3"
             >
               <div className="flex items-center gap-3 min-w-0">
                 <div className="w-8 h-8 rounded-xl bg-white dark:bg-white/[0.04] border border-[var(--border)] flex items-center justify-center text-[#0A66C2] shrink-0 shadow-2xs">
@@ -164,12 +164,12 @@ export const ContactSection: React.FC = () => {
                 </div>
                 <div className="min-w-0">
                   <div className="text-[10px] font-mono text-[#64748B] dark:text-slate-500 uppercase">LinkedIn</div>
-                  <span className="text-xs font-semibold text-[#0F172A] dark:text-slate-200 group-hover:text-[#2563EB] dark:group-hover:text-white transition-colors truncate block">
+                  <span className="text-xs font-semibold text-[#0F172A] dark:text-slate-200 group-hover:text-[#426B96] dark:group-hover:text-white transition-colors truncate block">
                     in/merajsiddieque
                   </span>
                 </div>
               </div>
-              <ArrowUpRight className="w-4 h-4 text-[#94A3B8] dark:text-slate-500 group-hover:text-[#2563EB] dark:group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all shrink-0" />
+              <ArrowUpRight className="w-4 h-4 text-[#94A3B8] dark:text-slate-500 group-hover:text-[#426B96] dark:group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all shrink-0" />
             </a>
 
             {/* GitHub */}
@@ -177,7 +177,7 @@ export const ContactSection: React.FC = () => {
               href={PERSONAL_INFO.socials.github}
               target="_blank"
               rel="noreferrer"
-              className="group p-2.5 sm:p-3 rounded-2xl bg-[var(--surface-alt)] border border-[var(--border)] hover:border-[#2563EB]/40 dark:hover:border-white/20 transition-all flex items-center justify-between gap-3"
+              className="group p-2.5 sm:p-3 rounded-2xl bg-[var(--surface-alt)] border border-[var(--border)] hover:border-[#426B96]/40 dark:hover:border-white/20 transition-all flex items-center justify-between gap-3"
             >
               <div className="flex items-center gap-3 min-w-0">
                 <div className="w-8 h-8 rounded-xl bg-white dark:bg-white/[0.04] border border-[var(--border)] flex items-center justify-center text-[#0F172A] dark:text-slate-300 shrink-0 shadow-2xs">
@@ -185,17 +185,17 @@ export const ContactSection: React.FC = () => {
                 </div>
                 <div className="min-w-0">
                   <div className="text-[10px] font-mono text-[#64748B] dark:text-slate-500 uppercase">GitHub</div>
-                  <span className="text-xs font-semibold text-[#0F172A] dark:text-slate-200 group-hover:text-[#2563EB] dark:group-hover:text-white transition-colors truncate block">
+                  <span className="text-xs font-semibold text-[#0F172A] dark:text-slate-200 group-hover:text-[#426B96] dark:group-hover:text-white transition-colors truncate block">
                     github.com/merajsiddieque (17+ Repos)
                   </span>
                 </div>
               </div>
-              <ArrowUpRight className="w-4 h-4 text-[#94A3B8] dark:text-slate-500 group-hover:text-[#2563EB] dark:group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all shrink-0" />
+              <ArrowUpRight className="w-4 h-4 text-[#94A3B8] dark:text-slate-500 group-hover:text-[#426B96] dark:group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all shrink-0" />
             </a>
 
             {/* Location */}
             <div className="p-2.5 sm:p-3 rounded-2xl bg-[var(--surface-alt)] border border-[var(--border)] flex items-center gap-3">
-              <div className="w-8 h-8 rounded-xl bg-white dark:bg-white/[0.04] border border-[var(--border)] flex items-center justify-center text-[#2563EB] dark:text-cyan-400 shrink-0 shadow-2xs">
+              <div className="w-8 h-8 rounded-xl bg-white dark:bg-white/[0.04] border border-[var(--border)] flex items-center justify-center text-[#426B96] dark:text-cyan-400 shrink-0 shadow-2xs">
                 <MapPin className="w-4 h-4" />
               </div>
               <div className="min-w-0">
@@ -227,9 +227,9 @@ export const ContactSection: React.FC = () => {
             href={PERSONAL_INFO.socials.resume}
             target="_blank"
             rel="noreferrer"
-            className="w-full inline-flex items-center justify-center gap-2 h-10 px-4 rounded-xl bg-[var(--surface-alt)] hover:bg-[#E2E8F0] dark:hover:bg-white/[0.08] text-[#0F172A] dark:text-slate-300 hover:text-[#2563EB] dark:hover:text-white border border-[var(--border)] hover:border-[#2563EB]/40 dark:hover:border-white/20 text-xs font-mono font-medium transition-all active:scale-[0.99]"
+            className="w-full inline-flex items-center justify-center gap-2 h-10 px-4 rounded-xl bg-[var(--surface-alt)] hover:bg-[#E2E8F0] dark:hover:bg-white/[0.08] text-[#0F172A] dark:text-slate-300 hover:text-[#426B96] dark:hover:text-white border border-[var(--border)] hover:border-[#426B96]/40 dark:hover:border-white/20 text-xs font-mono font-medium transition-all active:scale-[0.99]"
           >
-            <FileText className="w-3.5 h-3.5 text-[#2563EB] dark:text-blue-400" />
+            <FileText className="w-3.5 h-3.5 text-[#426B96] dark:text-blue-400" />
             <span>Download Official Resume (PDF)</span>
             <ExternalLink className="w-3 h-3 text-[#94A3B8] dark:text-slate-500 ml-1" />
           </a>
@@ -286,7 +286,7 @@ export const ContactSection: React.FC = () => {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="e.g. Sarah Connor"
-                  className="w-full h-10 rounded-xl bg-[var(--surface-alt)] hover:bg-white dark:hover:bg-white/[0.05] border border-[var(--border)] focus:border-[#2563EB] dark:focus:border-blue-500/50 focus:ring-1 focus:ring-[#2563EB]/20 dark:focus:ring-blue-500/30 px-3.5 text-xs sm:text-sm text-[#0F172A] dark:text-white placeholder:text-[#94A3B8] dark:placeholder:text-slate-500 focus:outline-none transition-all font-sans"
+                  className="w-full h-10 rounded-xl bg-[var(--surface-alt)] hover:bg-white dark:hover:bg-white/[0.05] border border-[var(--border)] focus:border-[#426B96] dark:focus:border-blue-500/50 focus:ring-1 focus:ring-[#426B96]/20 dark:focus:ring-blue-500/30 px-3.5 text-xs sm:text-sm text-[#0F172A] dark:text-white placeholder:text-[#94A3B8] dark:placeholder:text-slate-500 focus:outline-none transition-all font-sans"
                 />
               </div>
 
@@ -301,7 +301,7 @@ export const ContactSection: React.FC = () => {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="e.g. sarah@acme-ai.com"
-                  className="w-full h-10 rounded-xl bg-[var(--surface-alt)] hover:bg-white dark:hover:bg-white/[0.05] border border-[var(--border)] focus:border-[#2563EB] dark:focus:border-blue-500/50 focus:ring-1 focus:ring-[#2563EB]/20 dark:focus:ring-blue-500/30 px-3.5 text-xs sm:text-sm text-[#0F172A] dark:text-white placeholder:text-[#94A3B8] dark:placeholder:text-slate-500 focus:outline-none transition-all font-sans"
+                  className="w-full h-10 rounded-xl bg-[var(--surface-alt)] hover:bg-white dark:hover:bg-white/[0.05] border border-[var(--border)] focus:border-[#426B96] dark:focus:border-blue-500/50 focus:ring-1 focus:ring-[#426B96]/20 dark:focus:ring-blue-500/30 px-3.5 text-xs sm:text-sm text-[#0F172A] dark:text-white placeholder:text-[#94A3B8] dark:placeholder:text-slate-500 focus:outline-none transition-all font-sans"
                 />
               </div>
             </div>
@@ -318,7 +318,7 @@ export const ContactSection: React.FC = () => {
                 value={formData.subject}
                 onChange={handleChange}
                 placeholder="e.g. AI / Backend Engineer Role at Acme Corp"
-                className="w-full h-10 rounded-xl bg-[var(--surface-alt)] hover:bg-white dark:hover:bg-white/[0.05] border border-[var(--border)] focus:border-[#2563EB] dark:focus:border-blue-500/50 focus:ring-1 focus:ring-[#2563EB]/20 dark:focus:ring-blue-500/30 px-3.5 text-xs sm:text-sm text-[#0F172A] dark:text-white placeholder:text-[#94A3B8] dark:placeholder:text-slate-500 focus:outline-none transition-all font-sans"
+                className="w-full h-10 rounded-xl bg-[var(--surface-alt)] hover:bg-white dark:hover:bg-white/[0.05] border border-[var(--border)] focus:border-[#426B96] dark:focus:border-blue-500/50 focus:ring-1 focus:ring-[#426B96]/20 dark:focus:ring-blue-500/30 px-3.5 text-xs sm:text-sm text-[#0F172A] dark:text-white placeholder:text-[#94A3B8] dark:placeholder:text-slate-500 focus:outline-none transition-all font-sans"
               />
             </div>
 
@@ -334,7 +334,7 @@ export const ContactSection: React.FC = () => {
                 value={formData.message}
                 onChange={handleChange}
                 placeholder="Tell me about your team, tech stack, or engineering project..."
-                className="w-full h-22 sm:h-24 rounded-xl bg-[var(--surface-alt)] hover:bg-white dark:hover:bg-white/[0.05] border border-[var(--border)] focus:border-[#2563EB] dark:focus:border-blue-500/50 focus:ring-1 focus:ring-[#2563EB]/20 dark:focus:ring-blue-500/30 p-3 text-xs sm:text-sm text-[#0F172A] dark:text-white placeholder:text-[#94A3B8] dark:placeholder:text-slate-500 focus:outline-none transition-all resize-none font-sans"
+                className="w-full h-22 sm:h-24 rounded-xl bg-[var(--surface-alt)] hover:bg-white dark:hover:bg-white/[0.05] border border-[var(--border)] focus:border-[#426B96] dark:focus:border-blue-500/50 focus:ring-1 focus:ring-[#426B96]/20 dark:focus:ring-blue-500/30 p-3 text-xs sm:text-sm text-[#0F172A] dark:text-white placeholder:text-[#94A3B8] dark:placeholder:text-slate-500 focus:outline-none transition-all resize-none font-sans"
               />
             </div>
 
@@ -342,7 +342,7 @@ export const ContactSection: React.FC = () => {
             <button
               type="submit"
               disabled={loading}
-              className="w-full h-10 rounded-xl bg-[#2563EB] hover:bg-[#1D4ED8] dark:bg-blue-600 dark:hover:bg-blue-500 active:scale-[0.99] text-white font-semibold text-xs sm:text-sm shadow-sm transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed select-none"
+              className="w-full h-10 rounded-xl bg-[#426B96] hover:bg-[#355A81] dark:bg-blue-600 dark:hover:bg-blue-500 active:scale-[0.99] text-white font-semibold text-xs sm:text-sm shadow-sm transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed select-none"
             >
               {loading ? (
                 <>

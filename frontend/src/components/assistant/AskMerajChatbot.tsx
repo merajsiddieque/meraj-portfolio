@@ -124,7 +124,7 @@ export const AskMerajChatbot: React.FC = () => {
       {/* 1. Header (Fixed at top of chat container) */}
       <header className="chat-header px-6 bg-[var(--surface)] border-b border-[var(--border)] flex items-center justify-between z-10 select-none transition-colors">
         <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-lg bg-blue-50 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/20 flex items-center justify-center text-[#2563EB] dark:text-blue-400 shadow-xs">
+          <div className="w-8 h-8 rounded-lg bg-blue-50 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/20 flex items-center justify-center text-[#426B96] dark:text-blue-400 shadow-xs">
             <Bot className="w-4 h-4" />
           </div>
           <div>
@@ -170,8 +170,8 @@ export const AskMerajChatbot: React.FC = () => {
                 className="flex flex-col items-center max-w-lg"
               >
                 {/* Minimal icon */}
-                <div className="w-14 h-14 rounded-2xl bg-blue-50 dark:bg-gradient-to-br dark:from-blue-500/20 dark:via-cyan-500/10 dark:to-transparent border border-blue-200 dark:border-blue-500/30 flex items-center justify-center text-[#2563EB] dark:text-blue-400 shadow-sm mb-4">
-                  <Sparkles className="w-7 h-7 text-[#2563EB] dark:text-blue-400" />
+                <div className="w-14 h-14 rounded-2xl bg-blue-50 dark:bg-gradient-to-br dark:from-blue-500/20 dark:via-cyan-500/10 dark:to-transparent border border-blue-200 dark:border-blue-500/30 flex items-center justify-center text-[#426B96] dark:text-blue-400 shadow-sm mb-4">
+                  <Sparkles className="w-7 h-7 text-[#426B96] dark:text-blue-400" />
                 </div>
 
                 <h1 className="text-2xl sm:text-3xl font-bold text-[#0F172A] dark:text-white tracking-tight mb-2">
@@ -190,20 +190,20 @@ export const AskMerajChatbot: React.FC = () => {
                       <button
                         key={idx}
                         onClick={() => handleSend(item.prompt)}
-                        className="group p-3 sm:p-3.5 rounded-xl bg-white dark:bg-white/[0.03] hover:bg-[#F8FAFC] dark:hover:bg-white/[0.06] border border-[#E5E7EB] dark:border-white/[0.08] hover:border-[#2563EB]/40 dark:hover:border-blue-500/40 text-left transition-all duration-150 flex items-start gap-3 active:scale-[0.98] shadow-sm dark:shadow-none cursor-pointer"
+                        className="group p-3 sm:p-3.5 rounded-xl bg-white dark:bg-white/[0.03] hover:bg-[#F8FAFC] dark:hover:bg-white/[0.06] border border-[#E5E7EB] dark:border-white/[0.08] hover:border-[#426B96]/40 dark:hover:border-blue-500/40 text-left transition-all duration-150 flex items-start gap-3 active:scale-[0.98] shadow-sm dark:shadow-none cursor-pointer"
                       >
-                        <div className="p-1.5 rounded-lg bg-[#F1F5F9] dark:bg-white/[0.03] border border-[#E5E7EB] dark:border-white/[0.06] text-[#64748B] group-hover:text-[#2563EB] group-hover:border-[#2563EB]/30 dark:text-slate-400 dark:group-hover:text-blue-400 dark:group-hover:border-blue-500/30 transition-colors shrink-0 mt-0.5">
+                        <div className="p-1.5 rounded-lg bg-[#F1F5F9] dark:bg-white/[0.03] border border-[#E5E7EB] dark:border-white/[0.06] text-[#64748B] group-hover:text-[#426B96] group-hover:border-[#426B96]/30 dark:text-slate-400 dark:group-hover:text-blue-400 dark:group-hover:border-blue-500/30 transition-colors shrink-0 mt-0.5">
                           <Icon className="w-3.5 h-3.5" />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <div className="text-xs font-semibold text-[#0F172A] dark:text-slate-200 group-hover:text-[#2563EB] dark:group-hover:text-white transition-colors mb-0.5">
+                          <div className="text-xs font-semibold text-[#0F172A] dark:text-slate-200 group-hover:text-[#426B96] dark:group-hover:text-white transition-colors mb-0.5">
                             {item.title}
                           </div>
                           <div className="text-[11px] text-[#64748B] dark:text-slate-400 group-hover:text-[#334155] dark:group-hover:text-slate-300 leading-snug line-clamp-2">
                             {item.prompt}
                           </div>
                         </div>
-                        <ArrowRight className="w-3.5 h-3.5 text-[#94A3B8] dark:text-slate-600 group-hover:text-[#2563EB] dark:group-hover:text-blue-400 group-hover:translate-x-0.5 transition-all shrink-0 mt-1" />
+                        <ArrowRight className="w-3.5 h-3.5 text-[#94A3B8] dark:text-slate-600 group-hover:text-[#426B96] dark:group-hover:text-blue-400 group-hover:translate-x-0.5 transition-all shrink-0 mt-1" />
                       </button>
                     );
                   })}
@@ -225,7 +225,7 @@ export const AskMerajChatbot: React.FC = () => {
                     }`}
                   >
                     {msg.role === "assistant" && (
-                      <div className="w-7 h-7 rounded-lg bg-blue-50 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/20 flex items-center justify-center text-[#2563EB] dark:text-blue-400 shrink-0 mt-0.5 shadow-2xs">
+                      <div className="w-7 h-7 rounded-lg bg-blue-50 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/20 flex items-center justify-center text-[#426B96] dark:text-blue-400 shrink-0 mt-0.5 shadow-2xs">
                         <Bot className="w-3.5 h-3.5" />
                       </div>
                     )}
@@ -233,7 +233,7 @@ export const AskMerajChatbot: React.FC = () => {
                     <div
                       className={`max-w-[85%] sm:max-w-[78%] rounded-2xl px-4 py-3 text-xs sm:text-sm leading-relaxed ${
                         msg.role === "user"
-                          ? "bg-[#2563EB] text-white font-medium rounded-tr-sm shadow-sm"
+                          ? "bg-[#426B96] text-white font-medium rounded-tr-sm shadow-sm"
                           : "bg-white dark:bg-white/[0.04] text-[#0F172A] dark:text-slate-200 border border-[#E5E7EB] dark:border-white/[0.08] rounded-tl-sm shadow-sm"
                       }`}
                     >
@@ -262,11 +262,11 @@ export const AskMerajChatbot: React.FC = () => {
                   animate={{ opacity: 1, y: 0 }}
                   className="flex gap-3 justify-start items-center"
                 >
-                  <div className="w-7 h-7 rounded-lg bg-blue-50 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/20 flex items-center justify-center text-[#2563EB] dark:text-blue-400 shrink-0 shadow-2xs">
+                  <div className="w-7 h-7 rounded-lg bg-blue-50 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/20 flex items-center justify-center text-[#426B96] dark:text-blue-400 shrink-0 shadow-2xs">
                     <Bot className="w-3.5 h-3.5" />
                   </div>
                   <div className="rounded-2xl rounded-tl-sm bg-white dark:bg-white/[0.04] border border-[#E5E7EB] dark:border-white/[0.08] px-3.5 py-2.5 flex items-center gap-1.5 shadow-sm">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] dark:bg-blue-400 animate-bounce" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#426B96] dark:bg-blue-400 animate-bounce" />
                     <span className="w-1.5 h-1.5 rounded-full bg-cyan-500 dark:bg-cyan-400 animate-bounce [animation-delay:0.2s]" />
                     <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 dark:bg-indigo-400 animate-bounce [animation-delay:0.4s]" />
                     <span className="text-[11px] font-mono text-[#64748B] dark:text-slate-400 ml-1.5">
@@ -289,7 +289,7 @@ export const AskMerajChatbot: React.FC = () => {
           {messages.length > 0 && (
             <div className="flex items-center gap-1.5 overflow-x-auto scrollbar-none pb-0.5">
               <span className="text-[10px] font-mono text-[#64748B] dark:text-slate-500 whitespace-nowrap flex items-center gap-1 shrink-0">
-                <Sparkles className="w-2.5 h-2.5 text-[#2563EB] dark:text-blue-400" />
+                <Sparkles className="w-2.5 h-2.5 text-[#426B96] dark:text-blue-400" />
                 Suggested:
               </span>
               {suggestedPrompts.slice(0, 4).map((prompt, idx) => (
@@ -297,7 +297,7 @@ export const AskMerajChatbot: React.FC = () => {
                   key={idx}
                   onClick={() => handleSend(prompt)}
                   disabled={loading}
-                  className="text-[11px] font-mono text-[#334155] dark:text-slate-300 hover:text-[#0F172A] dark:hover:text-white bg-[#F1F5F9] dark:bg-white/[0.03] hover:bg-[#E2E8F0] dark:hover:bg-white/[0.08] border border-[#E5E7EB] dark:border-white/[0.08] hover:border-[#2563EB]/40 dark:hover:border-blue-500/30 rounded-full px-2.5 py-1 transition-all whitespace-nowrap flex items-center gap-1 shrink-0 disabled:opacity-40 cursor-pointer"
+                  className="text-[11px] font-mono text-[#334155] dark:text-slate-300 hover:text-[#0F172A] dark:hover:text-white bg-[#F1F5F9] dark:bg-white/[0.03] hover:bg-[#E2E8F0] dark:hover:bg-white/[0.08] border border-[#E5E7EB] dark:border-white/[0.08] hover:border-[#426B96]/40 dark:hover:border-blue-500/30 rounded-full px-2.5 py-1 transition-all whitespace-nowrap flex items-center gap-1 shrink-0 disabled:opacity-40 cursor-pointer"
                 >
                   <span>{prompt}</span>
                 </button>
@@ -311,7 +311,7 @@ export const AskMerajChatbot: React.FC = () => {
               e.preventDefault();
               handleSend();
             }}
-            className="flex items-center gap-2 rounded-2xl bg-[#F8FAFC] dark:bg-white/[0.04] hover:bg-white dark:hover:bg-white/[0.06] border border-[#E5E7EB] dark:border-white/[0.1] focus-within:border-[#2563EB] focus-within:ring-1 focus-within:ring-[#2563EB]/30 transition-all p-1.5 sm:p-2 shadow-sm"
+            className="flex items-center gap-2 rounded-2xl bg-[#F8FAFC] dark:bg-white/[0.04] hover:bg-white dark:hover:bg-white/[0.06] border border-[#E5E7EB] dark:border-white/[0.1] focus-within:border-[#426B96] focus-within:ring-1 focus-within:ring-[#426B96]/30 transition-all p-1.5 sm:p-2 shadow-sm"
           >
             <input
               ref={inputRef}
@@ -325,7 +325,7 @@ export const AskMerajChatbot: React.FC = () => {
             <button
               type="submit"
               disabled={!input.trim() || loading}
-              className="p-2 sm:p-2.5 rounded-xl bg-[#2563EB] hover:bg-[#1D4ED8] dark:bg-blue-600 dark:hover:bg-blue-500 text-white disabled:opacity-30 disabled:pointer-events-none transition-all cursor-pointer shadow-sm active:scale-95 shrink-0"
+              className="p-2 sm:p-2.5 rounded-xl bg-[#426B96] hover:bg-[#355A81] dark:bg-blue-600 dark:hover:bg-blue-500 text-white disabled:opacity-30 disabled:pointer-events-none transition-all cursor-pointer shadow-sm active:scale-95 shrink-0"
               aria-label="Send message"
             >
               <Send className="w-3.5 h-3.5 text-white" />

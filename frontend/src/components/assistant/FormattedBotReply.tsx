@@ -26,7 +26,7 @@ function parseInlineMarkdown(text: string): React.ReactNode[] {
           href={linkMatch[2]}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#2563EB] dark:text-blue-400 font-medium underline underline-offset-2 hover:text-[#1D4ED8] dark:hover:text-blue-300 transition-colors"
+          className="text-[#426B96] dark:text-blue-400 font-medium underline underline-offset-2 hover:text-[#355A81] dark:hover:text-blue-300 transition-colors"
         >
           {linkMatch[1]}
         </a>
@@ -52,7 +52,7 @@ function parseInlineMarkdown(text: string): React.ReactNode[] {
       return (
         <code
           key={index}
-          className="px-1.5 py-0.5 rounded-md bg-[#F1F5F9] dark:bg-white/[0.08] text-[#2563EB] dark:text-blue-400 font-mono text-[11px] font-medium border border-[#E2E8F0] dark:border-white/[0.1]"
+          className="px-1.5 py-0.5 rounded-md bg-[#F1F5F9] dark:bg-white/[0.08] text-[#426B96] dark:text-blue-400 font-mono text-[11px] font-medium border border-[#E2E8F0] dark:border-white/[0.1]"
         >
           {codeMatch[1]}
         </code>
@@ -164,7 +164,7 @@ export const FormattedBotReply: React.FC<FormattedBotReplyProps> = ({ content })
             <ul key={idx} className="space-y-2 my-1 pl-0.5">
               {block.items.map((item, itemIdx) => (
                 <li key={itemIdx} className="flex items-start gap-2.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] dark:bg-blue-400 shrink-0 mt-2" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#426B96] dark:bg-blue-400 shrink-0 mt-2" />
                   <div className="flex-1 min-w-0">
                     {parseInlineMarkdown(item)}
                   </div>
@@ -179,7 +179,7 @@ export const FormattedBotReply: React.FC<FormattedBotReplyProps> = ({ content })
             <ol key={idx} className="space-y-2.5 my-1 pl-0.5">
               {block.items.map((item, itemIdx) => (
                 <li key={itemIdx} className="flex items-start gap-2.5">
-                  <span className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-blue-50 dark:bg-blue-500/15 border border-blue-200 dark:border-blue-500/30 text-[#2563EB] dark:text-blue-400 text-[10px] font-bold shrink-0 mt-0.5">
+                  <span className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-blue-50 dark:bg-blue-500/15 border border-blue-200 dark:border-blue-500/30 text-[#426B96] dark:text-blue-400 text-[10px] font-bold shrink-0 mt-0.5">
                     {item.number}
                   </span>
                   <div className="flex-1 min-w-0">

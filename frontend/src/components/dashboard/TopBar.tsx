@@ -22,12 +22,12 @@ export const TopBar: React.FC = () => {
           title="Search projects, skills, or ask anything"
         >
           <div className="flex items-center gap-2">
-            <Search className="w-3.5 h-3.5 text-[#94A3B8] dark:text-slate-500 group-hover:text-[#2563EB] dark:group-hover:text-blue-400 transition-colors" />
+            <Search className="w-3.5 h-3.5 text-[#94A3B8] dark:text-slate-500 group-hover:text-[#426B96] dark:group-hover:text-blue-400 transition-colors" />
             <span className="text-[#64748B] dark:text-slate-400 group-hover:text-[#0F172A] dark:group-hover:text-slate-200 transition-colors text-[11px] sm:text-xs font-sans">
               Search projects, skills, or ask anything...
             </span>
           </div>
-          <div className="inline-flex items-center justify-center w-6 h-6 rounded-md bg-white dark:bg-white/[0.08] border border-[#E2E8F0] dark:border-white/[0.12] text-[#64748B] group-hover:text-[#2563EB] group-hover:border-blue-300 dark:text-slate-300 dark:group-hover:text-blue-400 dark:group-hover:border-blue-500/40 transition-all shadow-2xs">
+          <div className="inline-flex items-center justify-center w-6 h-6 rounded-md bg-white dark:bg-white/[0.08] border border-[#E2E8F0] dark:border-white/[0.12] text-[#64748B] group-hover:text-[#426B96] group-hover:border-blue-300 dark:text-slate-300 dark:group-hover:text-blue-400 dark:group-hover:border-blue-500/40 transition-all shadow-2xs">
             <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
           </div>
         </button>
@@ -49,7 +49,7 @@ export const TopBar: React.FC = () => {
           href={PERSONAL_INFO.socials.resume}
           target="_blank"
           rel="noreferrer"
-          className="inline-flex items-center gap-1.5 h-8 px-3.5 rounded-lg bg-[#2563EB] hover:bg-[#1D4ED8] dark:bg-blue-600 dark:hover:bg-blue-500 text-white text-xs font-semibold shadow-sm transition-colors active:scale-95"
+          className="inline-flex items-center gap-1.5 h-8 px-3.5 rounded-lg bg-[#426B96] hover:bg-[#355A81] dark:bg-blue-600 dark:hover:bg-blue-500 text-white text-xs font-semibold shadow-sm transition-colors active:scale-95"
         >
           <FileText className="w-3.5 h-3.5 text-white" />
           <span className="text-white">Resume</span>

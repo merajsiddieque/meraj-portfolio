@@ -6,7 +6,7 @@ import { ArrowRight, ChevronLeft, ChevronRight, ExternalLink, Github, Layers } f
 import { Project } from "@/types";
 
 const RepositoryCard: React.FC<{ project: Project }> = ({ project }) => (
-  <article className="w-full min-w-0 overflow-hidden rounded-[24px] p-5 sm:p-6 flex flex-col bg-white dark:bg-[#0D121F]/70 border border-[#E5E7EB] dark:border-white/[0.08] shadow-sm hover:border-[#2563EB] dark:hover:border-white/20 transition-colors">
+  <article className="w-full min-w-0 overflow-hidden rounded-[24px] p-5 sm:p-6 flex flex-col bg-white dark:bg-[#1A212B]/70 border border-[#E5E7EB] dark:border-white/[0.08] shadow-sm hover:border-[#426B96] dark:hover:border-white/20 transition-colors">
     <div className="min-w-0">
       <div className="flex flex-wrap items-center gap-2 mb-3">
         <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-medium bg-blue-50 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/20 text-blue-600 dark:text-blue-300">
@@ -18,7 +18,7 @@ const RepositoryCard: React.FC<{ project: Project }> = ({ project }) => (
       <h3 className="min-w-0 break-words [overflow-wrap:anywhere] line-clamp-2 text-lg font-bold tracking-tight text-[#0F172A] dark:text-white">
         {project.title}
       </h3>
-      <p className="break-words [overflow-wrap:anywhere] mt-2 text-xs font-semibold text-cyan-700 dark:text-cyan-300 line-clamp-2">
+      <p className="break-words [overflow-wrap:anywhere] mt-2 text-xs font-semibold text-[#426B96] dark:text-blue-300 line-clamp-2">
         {project.tagline}
       </p>
 
@@ -89,7 +89,7 @@ export const FeaturedProjectsGrid: React.FC = () => {
     <section className="space-y-5">
       <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 pb-2 border-b border-[#E5E7EB] dark:border-white/[0.06]">
         <div className="space-y-1">
-          <div className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-[#2563EB] dark:text-blue-400">
+          <div className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-[#426B96] dark:text-blue-400">
             <Layers className="w-3.5 h-3.5" />
             <span>{projects.length} GitHub starred repositories</span>
           </div>

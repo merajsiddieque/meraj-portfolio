@@ -165,7 +165,7 @@ export const GitHubDashboard: React.FC = () => {
   return (
     <div className="space-y-8 select-none">
       {/* 1. Profile Header */}
-      <section className="w-full bg-white dark:bg-[#0D121F]/70 border border-[#E5E7EB] dark:border-white/[0.08] rounded-2xl p-6 sm:p-8 shadow-sm dark:shadow-none relative overflow-hidden transition-colors">
+      <section className="w-full bg-white dark:bg-[#1A212B]/70 border border-[#E5E7EB] dark:border-white/[0.08] rounded-2xl p-6 sm:p-8 shadow-sm dark:shadow-none relative overflow-hidden transition-colors">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           {/* Avatar & User Details */}
           <div className="flex items-center gap-4 sm:gap-5">
@@ -185,7 +185,7 @@ export const GitHubDashboard: React.FC = () => {
                 <h1 className="text-xl sm:text-2xl font-bold text-[#0F172A] dark:text-white tracking-tight">
                   {profile.name}
                 </h1>
-                <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-blue-50 text-[#2563EB] border border-blue-200 dark:bg-blue-500/10 dark:text-blue-400 dark:border-blue-500/20 font-medium">
+                <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-blue-50 text-[#426B96] border border-blue-200 dark:bg-blue-500/10 dark:text-blue-400 dark:border-blue-500/20 font-medium">
                   Public Profile
                 </span>
               </div>
@@ -193,7 +193,7 @@ export const GitHubDashboard: React.FC = () => {
                 href={`https://github.com/${profile.username}`}
                 target="_blank"
                 rel="noreferrer"
-                className="text-xs font-mono text-[#64748B] hover:text-[#2563EB] dark:text-slate-400 dark:hover:text-blue-400 transition-colors mt-0.5"
+                className="text-xs font-mono text-[#64748B] hover:text-[#426B96] dark:text-slate-400 dark:hover:text-blue-400 transition-colors mt-0.5"
               >
                 @{profile.username}
               </a>
@@ -212,14 +212,14 @@ export const GitHubDashboard: React.FC = () => {
               title="Refresh GitHub data"
               aria-label="Refresh GitHub data"
             >
-              <RefreshCw className={`w-4 h-4 ${loading ? "animate-spin text-[#2563EB] dark:text-blue-400" : ""}`} />
+              <RefreshCw className={`w-4 h-4 ${loading ? "animate-spin text-[#426B96] dark:text-blue-400" : ""}`} />
             </button>
 
             <a
               href={`https://github.com/${profile.username}`}
               target="_blank"
               rel="noreferrer"
-              className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#2563EB] hover:bg-[#1D4ED8] dark:bg-blue-600 dark:hover:bg-blue-500 text-white text-xs font-semibold shadow-sm transition-colors active:scale-95"
+              className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#426B96] hover:bg-[#355A81] dark:bg-blue-600 dark:hover:bg-blue-500 text-white text-xs font-semibold shadow-sm transition-colors active:scale-95"
             >
               <Github className="w-4 h-4 text-white" />
               <span className="text-white">GitHub Profile</span>
@@ -232,7 +232,7 @@ export const GitHubDashboard: React.FC = () => {
       {/* 2. Compact Horizontal KPI Stats Row */}
       <section className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         {/* Repositories */}
-        <div className="p-4 rounded-2xl bg-white dark:bg-[#0D121F]/70 border border-[#E5E7EB] dark:border-white/[0.08] shadow-sm dark:shadow-none flex items-center justify-between transition-colors">
+        <div className="p-4 rounded-2xl bg-white dark:bg-[#1A212B]/70 border border-[#E5E7EB] dark:border-white/[0.08] shadow-sm dark:shadow-none flex items-center justify-between transition-colors">
           <div>
             <span className="text-[11px] font-mono text-[#64748B] dark:text-slate-400 uppercase tracking-wider">
               Repositories
@@ -241,13 +241,13 @@ export const GitHubDashboard: React.FC = () => {
               {allRepositories.length || profile.public_repos}
             </p>
           </div>
-          <div className="p-2.5 rounded-xl bg-blue-50 dark:bg-blue-600/10 border border-blue-100 dark:border-blue-500/20 text-[#2563EB] dark:text-blue-400">
+          <div className="p-2.5 rounded-xl bg-blue-50 dark:bg-blue-600/10 border border-blue-100 dark:border-blue-500/20 text-[#426B96] dark:text-blue-400">
             <FolderGit2 className="w-5 h-5" />
           </div>
         </div>
 
         {/* Stars */}
-        <div className="p-4 rounded-2xl bg-white dark:bg-[#0D121F]/70 border border-[#E5E7EB] dark:border-white/[0.08] shadow-sm dark:shadow-none flex items-center justify-between transition-colors">
+        <div className="p-4 rounded-2xl bg-white dark:bg-[#1A212B]/70 border border-[#E5E7EB] dark:border-white/[0.08] shadow-sm dark:shadow-none flex items-center justify-between transition-colors">
           <div>
             <span className="text-[11px] font-mono text-[#64748B] dark:text-slate-400 uppercase tracking-wider">
               Total Stars
@@ -260,7 +260,7 @@ export const GitHubDashboard: React.FC = () => {
         </div>
 
         {/* Followers */}
-        <div className="p-4 rounded-2xl bg-white dark:bg-[#0D121F]/70 border border-[#E5E7EB] dark:border-white/[0.08] shadow-sm dark:shadow-none flex items-center justify-between transition-colors">
+        <div className="p-4 rounded-2xl bg-white dark:bg-[#1A212B]/70 border border-[#E5E7EB] dark:border-white/[0.08] shadow-sm dark:shadow-none flex items-center justify-between transition-colors">
           <div>
             <span className="text-[11px] font-mono text-[#64748B] dark:text-slate-400 uppercase tracking-wider">
               Followers
@@ -273,7 +273,7 @@ export const GitHubDashboard: React.FC = () => {
         </div>
 
         {/* Commit Activity */}
-        <div className="p-4 rounded-2xl bg-white dark:bg-[#0D121F]/70 border border-[#E5E7EB] dark:border-white/[0.08] shadow-sm dark:shadow-none flex items-center justify-between transition-colors">
+        <div className="p-4 rounded-2xl bg-white dark:bg-[#1A212B]/70 border border-[#E5E7EB] dark:border-white/[0.08] shadow-sm dark:shadow-none flex items-center justify-between transition-colors">
           <div>
             <span className="text-[11px] font-mono text-[#64748B] dark:text-slate-400 uppercase tracking-wider">
               Commit Activity
@@ -287,10 +287,10 @@ export const GitHubDashboard: React.FC = () => {
       </section>
 
       {/* 3. Language Distribution (Clean Horizontal Progress Bars - Minimal Editorial) */}
-      <section className="w-full bg-white dark:bg-[#0D121F]/70 border border-[#E5E7EB] dark:border-white/[0.08] rounded-2xl p-6 space-y-4 shadow-sm dark:shadow-none transition-colors">
+      <section className="w-full bg-white dark:bg-[#1A212B]/70 border border-[#E5E7EB] dark:border-white/[0.08] rounded-2xl p-6 space-y-4 shadow-sm dark:shadow-none transition-colors">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Code2 className="w-4 h-4 text-[#2563EB] dark:text-blue-400" />
+            <Code2 className="w-4 h-4 text-[#426B96] dark:text-blue-400" />
             <h3 className="text-sm font-bold text-[#0F172A] dark:text-white tracking-tight">Language Distribution</h3>
           </div>
           <span className="text-[11px] font-mono text-[#64748B] dark:text-slate-400">Across all public repos</span>
@@ -352,7 +352,7 @@ export const GitHubDashboard: React.FC = () => {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search repos, topics..."
-                className="w-full h-9 pl-9 pr-3 rounded-xl bg-[#F1F5F9] dark:bg-white/[0.03] border border-[#E5E7EB] dark:border-white/[0.08] focus:border-[#2563EB] dark:focus:border-blue-500/40 text-xs text-[#0F172A] dark:text-white placeholder:text-[#94A3B8] dark:placeholder:text-slate-500 focus:outline-none transition-colors"
+                className="w-full h-9 pl-9 pr-3 rounded-xl bg-[#F1F5F9] dark:bg-white/[0.03] border border-[#E5E7EB] dark:border-white/[0.08] focus:border-[#426B96] dark:focus:border-blue-500/40 text-xs text-[#0F172A] dark:text-white placeholder:text-[#94A3B8] dark:placeholder:text-slate-500 focus:outline-none transition-colors"
               />
               {searchQuery && (
                 <button
@@ -396,14 +396,14 @@ export const GitHubDashboard: React.FC = () => {
           </span>
           {availableLanguages.map((lang) => {
             const active = selectedLanguage === lang;
-            const langColor = lang === "All" ? "#2563EB" : LANGUAGE_COLORS[lang] || "#8B949E";
+            const langColor = lang === "All" ? "#426B96" : LANGUAGE_COLORS[lang] || "#8B949E";
             return (
               <button
                 key={lang}
                 onClick={() => setSelectedLanguage(lang)}
                 className={`px-3 py-1 rounded-full text-xs font-mono transition-all shrink-0 cursor-pointer ${
                   active
-                    ? "bg-[#EFF6FF] text-[#2563EB] border border-[#DBEAFE] font-semibold dark:bg-blue-600/20 dark:text-white dark:border-blue-500/40"
+                    ? "bg-[#F1F5F8] text-[#426B96] border border-[#E2EAF1] font-semibold dark:bg-blue-600/20 dark:text-white dark:border-blue-500/40"
                     : "bg-[#F1F5F9] text-[#64748B] hover:text-[#0F172A] hover:bg-[#E2E8F0] border border-[#E5E7EB] dark:bg-white/[0.02] dark:text-slate-400 dark:hover:text-slate-200 dark:hover:bg-white/[0.05] dark:border-white/[0.06]"
                 }`}
               >
@@ -430,13 +430,13 @@ export const GitHubDashboard: React.FC = () => {
                   layout
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.18 }}
-                  className="bg-white dark:bg-[#0D121F]/80 border border-[#E5E7EB] dark:border-white/[0.08] hover:border-[#2563EB] dark:hover:border-blue-500/30 rounded-2xl p-5 flex flex-col justify-between transition-all duration-180 shadow-sm hover:shadow-md dark:shadow-none group select-none"
+                  className="bg-white dark:bg-[#1A212B]/80 border border-[#E5E7EB] dark:border-white/[0.08] hover:border-[#426B96] dark:hover:border-blue-500/30 rounded-2xl p-5 flex flex-col justify-between transition-all duration-180 shadow-sm hover:shadow-md dark:shadow-none group select-none"
                 >
                   <div>
                     {/* Top Row: Icon & Pinned Status */}
                     <div className="flex items-center justify-between mb-3">
                       <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 rounded-lg bg-[#F8FAFC] dark:bg-white/[0.03] border border-[#E5E7EB] dark:border-white/[0.08] flex items-center justify-center text-[#2563EB] dark:text-blue-400 group-hover:bg-blue-50 dark:group-hover:bg-blue-600/10 group-hover:border-blue-200 dark:group-hover:border-blue-500/20 transition-colors">
+                        <div className="w-8 h-8 rounded-lg bg-[#F8FAFC] dark:bg-white/[0.03] border border-[#E5E7EB] dark:border-white/[0.08] flex items-center justify-center text-[#426B96] dark:text-blue-400 group-hover:bg-blue-50 dark:group-hover:bg-blue-600/10 group-hover:border-blue-200 dark:group-hover:border-blue-500/20 transition-colors">
                           <FolderGit2 className="w-4 h-4" />
                         </div>
                         {repo.is_pinned && (
@@ -461,7 +461,7 @@ export const GitHubDashboard: React.FC = () => {
                     </div>
 
                     {/* Repository Name */}
-                    <h3 className="text-base font-bold text-[#0F172A] dark:text-white tracking-tight group-hover:text-[#2563EB] dark:group-hover:text-blue-400 transition-colors line-clamp-1">
+                    <h3 className="text-base font-bold text-[#0F172A] dark:text-white tracking-tight group-hover:text-[#426B96] dark:group-hover:text-blue-400 transition-colors line-clamp-1">
                       {repo.name}
                     </h3>
 
@@ -523,7 +523,7 @@ export const GitHubDashboard: React.FC = () => {
                         href={repo.homepage}
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-flex items-center gap-1 text-xs font-medium text-[#2563EB] hover:text-[#1D4ED8] dark:text-blue-400 dark:hover:text-blue-300 transition-colors"
+                        className="inline-flex items-center gap-1 text-xs font-medium text-[#426B96] hover:text-[#355A81] dark:text-blue-400 dark:hover:text-blue-300 transition-colors"
                       >
                         <Globe className="w-3.5 h-3.5" />
                         <span>Live Demo</span>
@@ -539,7 +539,7 @@ export const GitHubDashboard: React.FC = () => {
 
         {/* Empty State */}
         {filteredRepositories.length === 0 && (
-          <div className="py-16 text-center rounded-2xl bg-white dark:bg-[#0D121F]/40 border border-[#E5E7EB] dark:border-white/[0.06] shadow-sm space-y-3">
+          <div className="py-16 text-center rounded-2xl bg-white dark:bg-[#1A212B]/40 border border-[#E5E7EB] dark:border-white/[0.06] shadow-sm space-y-3">
             <div className="w-12 h-12 rounded-2xl bg-[#F8FAFC] dark:bg-white/[0.03] border border-[#E5E7EB] dark:border-white/10 flex items-center justify-center text-[#64748B] dark:text-slate-500 mx-auto">
               <FolderGit2 className="w-6 h-6" />
             </div>
@@ -552,7 +552,7 @@ export const GitHubDashboard: React.FC = () => {
                 setSearchQuery("");
                 setSelectedLanguage("All");
               }}
-              className="px-3.5 py-1.5 rounded-xl bg-[#EFF6FF] text-[#2563EB] border border-[#DBEAFE] text-xs font-semibold hover:bg-blue-100 dark:bg-blue-600/20 dark:text-blue-400 dark:border-blue-500/30 transition-colors cursor-pointer"
+              className="px-3.5 py-1.5 rounded-xl bg-[#F1F5F8] text-[#426B96] border border-[#E2EAF1] text-xs font-semibold hover:bg-blue-100 dark:bg-blue-600/20 dark:text-blue-400 dark:border-blue-500/30 transition-colors cursor-pointer"
             >
               Reset Filters
             </button>

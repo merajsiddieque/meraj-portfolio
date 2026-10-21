@@ -37,7 +37,7 @@ export const Footer: React.FC = () => {
       {/* Center: Tech Stack & SVNIT Identity */}
       <div className="hidden lg:flex items-center gap-2 text-[11px] font-mono text-[#64748B] dark:text-slate-400">
         <span className="flex items-center gap-1 text-[#64748B] dark:text-slate-400">
-          <Sparkles className="w-3 h-3 text-[#2563EB] dark:text-cyan-400" />
+          <Sparkles className="w-3 h-3 text-[#426B96] dark:text-cyan-400" />
           <span>SVNIT Surat B.Tech AI</span>
         </span>
         <span className="text-[#CBD5E1] dark:text-slate-600">•</span>
@@ -73,7 +73,7 @@ export const Footer: React.FC = () => {
         {/* Email */}
         <a
           href={`mailto:${PERSONAL_INFO.socials.email}`}
-          className="p-1.5 rounded-lg text-[#64748B] hover:text-[#2563EB] hover:bg-[#F1F5F9] dark:text-slate-400 dark:hover:text-electric-400 dark:hover:bg-white/5 transition-colors"
+          className="p-1.5 rounded-lg text-[#64748B] hover:text-[#426B96] hover:bg-[#F1F5F9] dark:text-slate-400 dark:hover:text-electric-400 dark:hover:bg-white/5 transition-colors"
           title={`Email: ${PERSONAL_INFO.socials.email}`}
           aria-label="Email Contact"
         >
@@ -85,7 +85,7 @@ export const Footer: React.FC = () => {
         {/* Scroll Back to Top */}
         <button
           onClick={scrollToTop}
-          className="p-1.5 rounded-lg text-[#64748B] hover:text-[#2563EB] hover:bg-blue-50 dark:text-slate-400 dark:hover:text-electric-400 dark:hover:bg-electric-500/10 transition-all group cursor-pointer"
+          className="p-1.5 rounded-lg text-[#64748B] hover:text-[#426B96] hover:bg-blue-50 dark:text-slate-400 dark:hover:text-electric-400 dark:hover:bg-electric-500/10 transition-all group cursor-pointer"
           title="Scroll to Top"
           aria-label="Scroll back to top"
         >

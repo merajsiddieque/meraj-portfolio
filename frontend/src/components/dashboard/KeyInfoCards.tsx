@@ -10,9 +10,9 @@ export const KeyInfoCards: React.FC = () => {
       {/* 4 Compact Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {/* 1. Currently Exploring */}
-        <div className="p-4 rounded-2xl bg-[#0D121F]/70 border border-white/[0.08] flex flex-col justify-between">
-          <div className="flex items-center gap-2 text-amber-400 mb-2">
-            <Lightbulb className="w-4 h-4 text-amber-400" />
+        <div className="p-4 rounded-2xl bg-[#1A212B]/70 border border-white/[0.08] flex flex-col justify-between">
+          <div className="flex items-center gap-2 text-blue-400 mb-2">
+            <Lightbulb className="w-4 h-4 text-blue-400" />
             <span className="text-xs font-semibold text-white">Currently Exploring</span>
           </div>
           <p className="text-xs text-slate-300 leading-relaxed font-medium">
@@ -21,7 +21,7 @@ export const KeyInfoCards: React.FC = () => {
         </div>
 
         {/* 2. Education */}
-        <div className="p-4 rounded-2xl bg-[#0D121F]/70 border border-white/[0.08] flex flex-col justify-between">
+        <div className="p-4 rounded-2xl bg-[#1A212B]/70 border border-white/[0.08] flex flex-col justify-between">
           <div className="flex items-center gap-2 text-blue-400 mb-2">
             <GraduationCap className="w-4 h-4 text-blue-400" />
             <span className="text-xs font-semibold text-white">Education</span>
@@ -33,9 +33,9 @@ export const KeyInfoCards: React.FC = () => {
         </div>
 
         {/* 3. Location */}
-        <div className="p-4 rounded-2xl bg-[#0D121F]/70 border border-white/[0.08] flex flex-col justify-between">
-          <div className="flex items-center gap-2 text-cyan-400 mb-2">
-            <MapPin className="w-4 h-4 text-cyan-400" />
+        <div className="p-4 rounded-2xl bg-[#1A212B]/70 border border-white/[0.08] flex flex-col justify-between">
+          <div className="flex items-center gap-2 text-blue-400 mb-2">
+            <MapPin className="w-4 h-4 text-blue-400" />
             <span className="text-xs font-semibold text-white">Location</span>
           </div>
           <div className="text-xs text-slate-300 leading-relaxed font-medium">
@@ -45,7 +45,7 @@ export const KeyInfoCards: React.FC = () => {
         </div>
 
         {/* 4. Contact */}
-        <div className="p-4 rounded-2xl bg-[#0D121F]/70 border border-white/[0.08] flex flex-col justify-between">
+        <div className="p-4 rounded-2xl bg-[#1A212B]/70 border border-white/[0.08] flex flex-col justify-between">
           <div className="flex items-center gap-2 text-blue-400 mb-2">
             <Mail className="w-4 h-4 text-blue-400" />
             <span className="text-xs font-semibold text-white">Contact</span>

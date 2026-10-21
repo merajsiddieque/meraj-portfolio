@@ -46,7 +46,7 @@ export const MinimalHero: React.FC = () => {
   }, []);
 
   return (
-    <section className="w-full bg-white dark:bg-[#0D121F]/60 border border-[#E5E7EB] dark:border-white/[0.08] rounded-[24px] p-6 sm:p-8 relative overflow-hidden shadow-sm dark:shadow-none transition-colors duration-180">
+    <section className="w-full bg-white dark:bg-[#1A212B]/60 border border-[#E5E7EB] dark:border-white/[0.08] rounded-[24px] p-6 sm:p-8 relative overflow-hidden shadow-sm dark:shadow-none transition-colors duration-180">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         {/* Left: Biography & Tech Highlights */}
         <div className="lg:col-span-7 flex flex-col justify-center space-y-4">
@@ -73,26 +73,26 @@ export const MinimalHero: React.FC = () => {
           {/* Core Tech Stack Badges (Outlined in light mode) */}
           <div className="flex flex-wrap items-center gap-2 pt-1">
             {/* FastAPI */}
-            <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F8FAFC] dark:bg-[#0E1726] border border-[#E5E7EB] dark:border-teal-500/30 text-[#0F172A] dark:text-teal-400 text-xs font-mono transition-colors">
-              <Zap className="w-3 h-3 text-teal-500 dark:text-teal-400" />
+            <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F8FAFC] dark:bg-[#202833] border border-[#E5E7EB] dark:border-blue-500/30 text-[#0F172A] dark:text-blue-400 text-xs font-mono transition-colors">
+              <Zap className="w-3 h-3 text-blue-600 dark:text-blue-400" />
               <span>FastAPI</span>
             </div>
 
             {/* LangGraph */}
-            <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F8FAFC] dark:bg-[#0E1726] border border-[#E5E7EB] dark:border-cyan-500/30 text-[#0F172A] dark:text-cyan-400 text-xs font-mono transition-colors">
-              <Bot className="w-3 h-3 text-cyan-600 dark:text-cyan-400" />
+            <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F8FAFC] dark:bg-[#202833] border border-[#E5E7EB] dark:border-blue-500/30 text-[#0F172A] dark:text-blue-400 text-xs font-mono transition-colors">
+              <Bot className="w-3 h-3 text-blue-600 dark:text-blue-400" />
               <span>LangGraph</span>
             </div>
 
             {/* Supabase */}
-            <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F8FAFC] dark:bg-[#0E1726] border border-[#E5E7EB] dark:border-emerald-500/30 text-[#0F172A] dark:text-emerald-400 text-xs font-mono transition-colors">
-              <Database className="w-3 h-3 text-emerald-600 dark:text-emerald-400" />
+            <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F8FAFC] dark:bg-[#202833] border border-[#E5E7EB] dark:border-blue-500/30 text-[#0F172A] dark:text-blue-400 text-xs font-mono transition-colors">
+              <Database className="w-3 h-3 text-blue-600 dark:text-blue-400" />
               <span>Supabase</span>
             </div>
 
             {/* Gemini */}
-            <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F8FAFC] dark:bg-[#0E1726] border border-[#E5E7EB] dark:border-violet-500/30 text-[#0F172A] dark:text-violet-400 text-xs font-mono transition-colors">
-              <Stars className="w-3 h-3 text-violet-600 dark:text-violet-400" />
+            <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F8FAFC] dark:bg-[#202833] border border-[#E5E7EB] dark:border-blue-500/30 text-[#0F172A] dark:text-blue-400 text-xs font-mono transition-colors">
+              <Stars className="w-3 h-3 text-blue-600 dark:text-blue-400" />
               <span>Gemini</span>
             </div>
           </div>
@@ -103,7 +103,7 @@ export const MinimalHero: React.FC = () => {
               href={PERSONAL_INFO.socials.resume}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#2563EB] hover:bg-[#1D4ED8] dark:bg-blue-600 dark:hover:bg-blue-500 text-white font-semibold text-xs sm:text-sm shadow-sm transition-colors active:scale-95"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#426B96] hover:bg-[#355A81] dark:bg-blue-600 dark:hover:bg-blue-500 text-white font-semibold text-xs sm:text-sm shadow-sm transition-colors active:scale-95"
             >
               <FileText className="w-4 h-4 text-white" />
               <span>View Resume</span>
@@ -146,10 +146,10 @@ export const MinimalHero: React.FC = () => {
             {/* 1. Projects & Repos */}
             <Link
               href="/projects"
-              className="flex items-center gap-3 p-2.5 rounded-xl bg-white dark:bg-white/[0.02] hover:bg-[#F8FAFC] dark:hover:bg-white/[0.06] border border-[#E5E7EB] dark:border-white/[0.08] hover:border-[#2563EB]/40 dark:hover:border-white/20 shadow-sm dark:shadow-none transition-all group/proj cursor-pointer"
+              className="flex items-center gap-3 p-2.5 rounded-xl bg-white dark:bg-white/[0.02] hover:bg-[#F8FAFC] dark:hover:bg-white/[0.06] border border-[#E5E7EB] dark:border-white/[0.08] hover:border-[#426B96]/40 dark:hover:border-white/20 shadow-sm dark:shadow-none transition-all group/proj cursor-pointer"
               title="View all 17+ engineering projects across GitHub"
             >
-              <div className="p-2 rounded-lg bg-blue-50 dark:bg-blue-600/10 text-[#2563EB] dark:text-blue-400 border border-blue-100 dark:border-blue-500/20 transition-colors">
+              <div className="p-2 rounded-lg bg-blue-50 dark:bg-blue-600/10 text-[#426B96] dark:text-blue-400 border border-blue-100 dark:border-blue-500/20 transition-colors">
                 <Sparkles className="w-4 h-4" />
               </div>
               <div className="flex flex-col">
@@ -169,7 +169,7 @@ export const MinimalHero: React.FC = () => {
             {/* 2. Major Highlights */}
             <Link
               href="/projects"
-              className="flex items-center gap-3 p-2.5 rounded-xl bg-white dark:bg-white/[0.02] hover:bg-[#F8FAFC] dark:hover:bg-white/[0.06] border border-[#E5E7EB] dark:border-white/[0.08] hover:border-[#2563EB]/40 dark:hover:border-white/20 shadow-sm dark:shadow-none transition-all group/repo cursor-pointer"
+              className="flex items-center gap-3 p-2.5 rounded-xl bg-white dark:bg-white/[0.02] hover:bg-[#F8FAFC] dark:hover:bg-white/[0.06] border border-[#E5E7EB] dark:border-white/[0.08] hover:border-[#426B96]/40 dark:hover:border-white/20 shadow-sm dark:shadow-none transition-all group/repo cursor-pointer"
               title="View the 5 major highlighted flagship projects"
             >
               <div className="p-2 rounded-lg bg-slate-50 dark:bg-white/[0.04] text-[#475569] dark:text-slate-300 border border-[#E5E7EB] dark:border-white/10 transition-colors">
@@ -185,7 +185,7 @@ export const MinimalHero: React.FC = () => {
 
             {/* 3. SVNIT Surat */}
             <div className="flex items-center gap-3 p-2.5 rounded-xl bg-white dark:bg-white/[0.02] border border-[#E5E7EB] dark:border-white/[0.08] shadow-sm dark:shadow-none">
-              <div className="p-2 rounded-lg bg-violet-50 dark:bg-cyan-600/10 text-violet-600 dark:text-cyan-400 border border-violet-100 dark:border-cyan-500/20">
+              <div className="p-2 rounded-lg bg-violet-50 dark:bg-blue-600/10 text-blue-600 dark:text-blue-400 border border-blue-100 dark:border-blue-500/20">
                 <GraduationCap className="w-4 h-4" />
               </div>
               <div className="flex flex-col">
